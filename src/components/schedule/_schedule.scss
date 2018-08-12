@@ -1,0 +1,72 @@
+.sdtet-schedule-background {
+	background-image: url('../../assets/dog-festival-bg-translucent.png');
+}
+
+.sdtet-schedule-container {
+    text-align: center;
+}
+
+.sdtet-schedule-divider {
+    border-bottom: 2px solid red;
+}
+
+.sdtet-schedule-spacer {
+    height: 50px;
+    flex: 1 1 100%;
+}
+
+.sdtet-schedule-grid {
+    align-items: center;
+}
+
+.sdtet-schedule-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.sdtet-schedule-title {}
+
+.sdtet-schedule-divider {
+    flex: 1 1 100%;
+}
+
+// @supports (display:grid){
+// 	.sdtet-schedule-grid{
+// 		display: grid !important;	
+// 		grid-template-columns: 400px 200px 400px;	
+// 		grid-gap: 10px;
+// 	}
+// 	.sdtet-schedule-spacer{
+// 		grid-column-start: 1;
+// 		grid-column-end: 4;		
+// 	}
+// 	.sdtet-schedule-divider{
+// 		grid-column-start: 1;
+// 		grid-column-end: 4;		
+// 	}
+// }
+.sdtet-schedule-title {
+    font-size: 2rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+}
+
+.sdtet-schedule-date,
+.sdtet-schedule-main-stage,
+.sdtet-schedule-cultural-village {
+    align-self: center;
+}
+
+.sdtet-schedule-date {
+    font-weight: 600;
+}
+
+
+.sdtet-schedule-main-stage {
+    text-align: right;
+}
+
+.sdtet-schedule-cultural-village {
+    text-align: left;
+}

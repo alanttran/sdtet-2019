@@ -1,29 +1,50 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <v-app>
+      <v-content>
+        <navigation></navigation>
+        <carousel></carousel>
+        <schedule></schedule>
+        <entertainment></entertainment>
+        <pageant></pageant>
+        <vendors></vendors>
+        <volunteers></volunteers>
+        <sponsors></sponsors>
+        <directions></directions>
+      </v-content>
+    </v-app>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
+<script>
+  import Navigation from './components/navigation/navigation'
+  import Carousel from './components/carousel/carousel'
+  import Schedule from './components/schedule/schedule'
+  import Entertainment from './components/entertainment/entertainment'
+  import Pageant from './components/pageant/pageant'
+  import Sponsors from './components/sponsors/sponsors'
+  import Vendors from './components/vendors/vendors'
+  import Volunteers from './components/volunteers/volunteers'
+  import Directions from './components/directions/directions'
+  import Contact from './components/contact/contact'
+
+  export default {
+    name: 'app',
+    components: {
+      Navigation,
+      Carousel,
+      Schedule,
+      Entertainment,
+      Pageant,
+      Sponsors,
+      Vendors,
+      Volunteers,
+      Directions,
+      Contact
     }
   }
-}
+</script>
+
+<style lang="scss">
+  @import 'scss/style.scss';
 </style>
