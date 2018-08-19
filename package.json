@@ -1,6 +1,6 @@
 {
   "name": "sdtet",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "jquery": "^3.3.1",
     "moment": "^2.22.2",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1",
