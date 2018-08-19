@@ -3,5 +3,7 @@
 		"If you have any special needs or represent a group or individual with special needs, please contact us. Not all volunteer jobs are appropriate for all people.",
 		"We need volunteers to help us run the festival!"
 	],
-	"email": "vendor@sdtet.com"
+	"email": "volunteer@sdtet.com",
+	"signups_open": false,
+	"signup_form_url": "https://drive.google.com/open?id=1FiyUnlUw2ARtTxwVtGI6nfxrOywfI_O6jSSHN_u3np0"
 }

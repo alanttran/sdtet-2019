@@ -16,16 +16,19 @@
         </v-flex>
         <v-flex xs12 md6>
           <div class="sdtet-volunteers-forms-container sdtet-text-align-center">
-            <p><span class="navy"><b>Signups are closed!</b></span></p>
-            <div class="sdtet-h1-spacer">
-              <h1>&nbsp;</h1>
+            <div v-if="!volunteerData.signups_open">
+              <p><span class="navy"><b>Signups are closed!</b></span></p>
+              <div class="sdtet-h1-spacer">
+                <h1>&nbsp;</h1>
+              </div>
             </div>
-            <!-- <p>
-              <span class="sdtet-text-red-bold">Signups are open again!</span>
-            </p>
-            <a target="_blank" href="https://drive.google.com/open?id=1FiyUnlUw2ARtTxwVtGI6nfxrOywfI_O6jSSHN_u3np0">
-              <v-btn round color="teal" dark>Sign up now!</v-btn>
-            </a> -->
+            <div v-else>
+              <p><span class="sdtet-text-red-bold">Signups are open again!</span></p>
+              <a target="_blank" v-bind:href="volunteerData.signup_form_url">
+                <v-btn round color="teal" dark>Sign up now!</v-btn>
+              </a>
+            </div>
+            
             <br>
             <v-layout row justify-space-around>
               <v-flex md6>
@@ -74,5 +77,4 @@
     }
   }
 }
-</script>
 </script>
