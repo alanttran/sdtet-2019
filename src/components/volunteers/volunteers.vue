@@ -8,23 +8,11 @@
           <p>
             <strong>We are currently looking for volunteers!</strong>
           </p>
-          <div>
-            <p>We are looking for friendly, helpful, reliable volunteers to help with
-              this exciting festival. Our festival will be filled with people of
-              all ages. If you were at the festival last year, then you have a general
-              idea of how big it will be this year and how much fun everyone will
-              have. If you didn't attend the festival last year, then here is an
-              opportunity for you to come and help make this upcoming festival even
-              bigger and better!
-            </p>
-            <p>If you have any special needs or represent a group or individual with
-              special needs, please contact us. Not all volunteer jobs are appropriate
-              for all people.
-            </p>
-            <p>We need volunteers to help us run the festival! We have open shifts!</p>
-            <p>-VAYA (For more info email us at
-              <a href="mailto:volunteer@sdtet.com ">volunteer@sdtet.com</a>)</p>
+          <div v-for="text in volunteerData.text" :key="text.id">
+            <p>{{text}}</p>
           </div>
+          <p>-VAYA (For more info email us at
+              <a href="mailto:volunteer@sdtet.com ">volunteer@sdtet.com</a>)</p>
         </v-flex>
         <v-flex xs12 md6>
           <div class="sdtet-volunteers-forms-container sdtet-text-align-center">
@@ -75,3 +63,16 @@
 <style lang="scss">
   @import 'volunteers';
 </style>
+
+<script>
+  import data from './volunteers.json'
+
+  export default {
+  data () {
+    return {
+      volunteerData: data
+    }
+  }
+}
+</script>
+</script>
