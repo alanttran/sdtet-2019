@@ -9,7 +9,7 @@
       <!-- <v-btn href="#entertainment" large round color="teal" dark v-smooth-scroll><v-icon left style="width:20px;">movie creation</v-icon>Join our entertainment!</v-btn> -->
       <!-- <v-btn href="#sdtet-vendors-section" large round color="teal" dark v-smooth-scroll><v-icon left style="width:20px;">store</v-icon>Become a vendor!</v-btn>
       <v-btn href="#sdtet-sponsors-section" large round color="teal" dark v-smooth-scroll><v-icon left style="width:20px;">business center</v-icon>Sponsor us!</v-btn> -->
-      <v-btn href="#contestants" target="_blank" large round color="teal" dark v-smooth-scroll >Miss Vietnam San Diego Winners!</v-btn>
+      <v-btn href="https://goo.gl/forms/Q67Pl4yvXMdUSUJv1" target="_blank" large round color="teal" dark v-smooth-scroll >Sign Up for Pageant 2019!</v-btn>
     </div>
     
   </div>

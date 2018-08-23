@@ -1,6 +1,10 @@
 <template>
   <div id="sdtet-pageant-section" class="sdtet-container">
     <h1 class="sdtet-text-align-center">{{pageantData.title}}</h1>
+    <div class="sdtet-text-align-center">
+      <v-btn href="https://goo.gl/forms/Q67Pl4yvXMdUSUJv1" target="_blank" large round color="teal" dark v-smooth-scroll >Sign up for Pageant 2019!</v-btn>
+    </div>
+    <br/>
     <div class="ml-5 mr-5">
 
       <img class="ms-vn-logo ml-2 mb-2" style="float: right; max-width: 100%;" src="../../assets/MissVietnam_Logo.png">
@@ -27,7 +31,7 @@
               </div>
             </v-card-title>
             <v-card-actions>
-              <!-- <v-btn :href="contestant.fb_link" target="_blank" block outline round color="teal" dark>Vote for me!</v-btn> -->
+              <v-btn v-if="pageantData.voting" :href="contestant.fb_link" target="_blank" block outline round color="teal" dark>Vote for me!</v-btn>
             </v-card-actions>
           </v-card>
         </v-flex>

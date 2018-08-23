@@ -12,7 +12,7 @@
             <p>{{text}}</p>
           </div>
           <p>-VAYA (For more info email us at
-              <a href="mailto:volunteer@sdtet.com ">volunteer@sdtet.com</a>)</p>
+              <a href="mailto:volunteer@sdtet.com">volunteer@sdtet.com</a>)</p>
         </v-flex>
         <v-flex xs12 md6>
           <div class="sdtet-volunteers-forms-container sdtet-text-align-center">

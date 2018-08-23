@@ -46,5 +46,5 @@
 </script>
 
 <style lang="scss">
-  @import 'scss/style.scss';
+  @import 'theme/style.scss';
 </style>
