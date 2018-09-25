@@ -1,7 +1,7 @@
 <template>
 <div class="sdtet-schedule-background">
     <div id="sdtet-schedule-section" class="sdtet-schedule-container sdtet-container">
-        <h1>Event Schedule</h1>
+        <h1>Event Schedule 2018</h1>
         <p>Events and times can change without notice</p>
         <v-layout align-center>
             <v-layout row wrap class="sdtet-schedule-grid">

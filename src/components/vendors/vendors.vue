@@ -26,24 +26,24 @@
 </template>
 
 <script type="text/javascript">
-import GameCommercialBooth from './types/game-commercial-booth'
-import InfoArtBooth from './types/info-art-booth'
-import FoodBeverageBooth from './types/food-beverage'
-import NonProfitGovBooth from './types/non-profit-gov'
-import data from './vendors.json'
+	import GameCommercialBooth from './types/game-commercial-booth'
+	import InfoArtBooth from './types/info-art-booth'
+	import FoodBeverageBooth from './types/food-beverage'
+	import NonProfitGovBooth from './types/non-profit-gov'
+	import data from './vendors.json'
 
-export default {
-  data () {
-    return {
-      dialog: false,
-      vendorData: data
-    }
-  },
-  components: {
-    GameCommercialBooth,
-    InfoArtBooth,
-    FoodBeverageBooth,
-    NonProfitGovBooth
-  }
-}
+	export default {
+		data () {
+			return {
+				dialog: false,
+				vendorData: data
+			}
+		},
+		components: {
+			GameCommercialBooth,
+			InfoArtBooth,
+			FoodBeverageBooth,
+			NonProfitGovBooth
+		}
+	}
 </script>

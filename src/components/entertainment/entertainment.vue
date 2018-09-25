@@ -2,7 +2,7 @@
 <v-parallax  height="800px" :src="require('@/assets/tet-bg-02.jpg')">
   <div class="sdtet-entertainment-container">
     <div class="sdtet-container">
-      <h1 id="entertainment" class="sdtet-text-align-center">Entertainment</h1>
+      <h1 id="entertainment" class="sdtet-text-align-center">Entertainment 2018</h1>
       <p class="sdtet-text-align-center">Would you like to be part of our entertainment program? Apply below!</p>
 
       <v-layout row wrap>

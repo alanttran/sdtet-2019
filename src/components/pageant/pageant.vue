@@ -12,7 +12,11 @@
         <p>{{text}}</p>
       </div>
     </div>
-    
+    <br/>
+    <h2 class="sdtet-text-align-center">Royal Court 2017 Project - Project Homecoming</h2>
+    <p class="sdtet-text-align-center">Amazing work Diana Pham, Lynn Huynh and Tiffany Luu!</p>
+    <iframe style="display: block; margin:auto"  width="560" height="315" src="https://www.youtube.com/embed/zelKTIXD864?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <br/>
     <h1 class="sdtet-text-align-center">Pageant {{pageantData.pageant_year}}</h1>
     <h2 class="sdtet-text-align-center">{{pageantData.slogan}}</h2>
 
