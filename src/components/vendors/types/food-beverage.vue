@@ -11,7 +11,8 @@
    <v-card-title class="headline">Food and/or Beverage</v-card-title>
    <v-card-text>
     <v-alert outline color="info" icon="info" :value="true">
-      <b>Apply:</b>&nbsp; <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeFBN14OgWFnXxMsXV2sst0vbBAkaqkCvZqo7OJx2ru0y8G-g/viewform">Food Vendor Form</a>
+      <!-- <b>Apply:</b>&nbsp; <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeFBN14OgWFnXxMsXV2sst0vbBAkaqkCvZqo7OJx2ru0y8G-g/viewform">Food Vendor Form</a> -->
+      Vendor applications are now closed. Please direct any questions to vendor@sdtet.com. 
     </v-alert>
     
     <v-layout wrap>

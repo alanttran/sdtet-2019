@@ -25,15 +25,11 @@
           </v-card-title>
   
           <v-card-text>
-            Join us next year on Feb 8-10, 2019! More applications coming soon!<br/>
+            Join us next year on Feb 8-10, 2019! More applications coming soon! If you have any questions, email <b>info@sdtet.com</b>. <br/>
             <v-layout row wrap justify-space-around class="sdtet-text-align-center">
               <v-flex xs6 sm6 lg6>
-                <v-btn class="sdtet-button-flat-button sdtet-wrap-text" flat color="teal"  href="https://docs.google.com/forms/d/e/1FAIpQLSeFBN14OgWFnXxMsXV2sst0vbBAkaqkCvZqo7OJx2ru0y8G-g/viewform" target="_blank">
-                  <div class="pa-2 sdtet-text-align-center" >
-                    <img src="./assets/FoodBooth.svg"><br/>
-                    Food Vendor Application 2019
-                  </div>
-                </v-btn>
+                <br/><br/><br/>
+                Food Vendor applications are full. Please email vendor@sdtet.com if you have any questions. 
               </v-flex>
               <v-flex xs6 sm6 lg6>
                 <v-btn class="sdtet-button-flat-button sdtet-wrap-text" flat color="teal" href="https://docs.google.com/forms/d/e/1FAIpQLSdL6Xf-TZOjUR3yzvCneQSUqzTqxwSHkfA1OhgHR7XgK7IqBw/viewform" target="_blank">
@@ -50,7 +46,23 @@
                     Miss Vietnam 2019 Application
                   </div>
                 </v-btn>
-              </v-flex>                     
+              </v-flex>
+              <v-flex xs6 sm6 lg6>
+                <v-btn class="sdtet-wrap-text" flat color="teal" style="height: auto" href="https://docs.google.com/forms/d/1bxjmW1YjVQ9w75CITudI0XXj-m861T-kfneH2z_F9_0" target="_blank">
+                  <div class="pa-2 sdtet-text-align-center">
+                    <img height="100" src="./assets/Volunteer.svg"><br/>
+                    Volunteers 2019
+                  </div>
+                </v-btn>
+              </v-flex>
+              <v-flex xs6 sm6 lg6>
+                <v-btn class="sdtet-wrap-text" flat color="teal" style="height: auto" href="https://s3-us-west-1.amazonaws.com/sdtet/documents/VAYA_Sponsorship_2018_v1hi-res.pdf" target="_blank">
+                  <div class="pa-2 sdtet-text-align-center">
+                    <img height="100" src="./assets/Volunteer.svg"><br/>
+                    Sponsors 2019
+                  </div>
+                </v-btn>
+              </v-flex>                      
             </v-layout>
           </v-card-text>
   
