@@ -4,7 +4,7 @@
     <div class="ml-5 mr-5 mb-5">
       <v-layout row wrap>
         <v-flex xs12 md5 lg5>
-          <h1 id="sponsors">Sponsors 2018</h1>
+          <h1 id="sponsors">Sponsors</h1>
           <p>
             <b>The Sponsorship Application: </b>
             <a target="_blank" v-bind:href="sponsorData.applicationURL">download</a>

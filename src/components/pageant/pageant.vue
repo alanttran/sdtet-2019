@@ -2,7 +2,13 @@
   <div id="sdtet-pageant-section" class="sdtet-container">
     <h1 class="sdtet-text-align-center">{{pageantData.title}}</h1>
     <div class="sdtet-text-align-center">
-      <v-btn href="https://goo.gl/forms/Q67Pl4yvXMdUSUJv1" target="_blank" large round color="teal" dark v-smooth-scroll >Sign up for Pageant 2019!</v-btn>
+      <div v-if="!pageantData.signups_open">
+        <p><span class="navy"><b>Signups are closed! Stay tuned for more updates!</b></span></p>
+      </div>
+      <div v-else>
+        <v-btn href="https://goo.gl/forms/Q67Pl4yvXMdUSUJv1" target="_blank" large round color="teal" dark v-smooth-scroll >Sign up for Pageant 2019!</v-btn>
+      </div>
+      
     </div>
     <br/>
     <div class="ml-5 mr-5">

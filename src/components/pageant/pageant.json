@@ -6,5 +6,6 @@
 	],
 	"pageant_year": "2018",
 	"slogan": "Congratulations to our winners!",
-	"voting": false
+	"voting": false,
+	"signups_open": false
 }

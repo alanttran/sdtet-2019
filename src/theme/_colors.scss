@@ -6,10 +6,14 @@ $sdtet-yellow-01: #F5EE9E;
 $sdtet-yellow-02: #F7FFF7;
 $sdtet-red-01: #E3655B;
 
+// 2019 colors
+$sdtet-purple: #760BBD;
+$sdtet-blue: #023C52;
+
 // context colors
 $text-color: $sdtet-blue-01;
 $link-color: $sdtet-blue-02;
-$link-hover-color: $sdtet-blue-03;
+$link-hover-color: lighten($sdtet-purple, 10%);
 
 // backgrounds 
 $background-color-red: $sdtet-red-01;

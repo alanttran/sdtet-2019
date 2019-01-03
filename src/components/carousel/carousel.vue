@@ -3,15 +3,45 @@
     <v-carousel-item v-for="(item,i) in items" v-bind:src="item.src" :key="i"></v-carousel-item>
   </v-carousel> -->
   <div class="sdtet-jumbotron">
-    <div class="sdtet-container">
+    <v-layout column align-center justify-center class="sdtet-container">
       <!-- <h1>San Diego Tết Festival 2018<br/>Spring Blossoms - Mira Mesa<br/>February 16 - 18, 2018</h1> -->
-      <h1 class="sdtet-banner-message"><span class="sdtet-message-1">Thank you for coming to our festival!<br/></span>Join us next year on Feb 8-10, 2019!<br/>Year of the Pig</h1><br/>
+      <img class="sdtet-center-logo" src="../../assets/pig-logo.svg" alt="">
       <!-- <v-btn href="#entertainment" large round color="teal" dark v-smooth-scroll><v-icon left style="width:20px;">movie creation</v-icon>Join our entertainment!</v-btn> -->
       <!-- <v-btn href="#sdtet-vendors-section" large round color="teal" dark v-smooth-scroll><v-icon left style="width:20px;">store</v-icon>Become a vendor!</v-btn>
       <v-btn href="#sdtet-sponsors-section" large round color="teal" dark v-smooth-scroll><v-icon left style="width:20px;">business center</v-icon>Sponsor us!</v-btn> -->
-      <v-btn href="https://goo.gl/forms/Q67Pl4yvXMdUSUJv1" target="_blank" large round color="teal" dark v-smooth-scroll >Sign Up for Pageant 2019!</v-btn>
-      <v-btn href="#sdtet-vendors-section" target="_blank" large round color="teal" dark v-smooth-scroll >Vendor Applications 2019 Open!</v-btn>
-    </div>
+      <!-- <v-btn href="#sdtet-vendors-section" target="_blank" large round color="teal" dark v-smooth-scroll >Vendor Applications 2019 Open!</v-btn> -->
+      <v-flex class="sdtet-container" >
+        <div class="sdtet-date-container">
+          <p><b>FEBRUARY</b></p>
+          <table>
+            <tr>
+              <td>8<sup>th</sup></td>
+              <td>|</td>
+              <td><b>Friday</b></td>
+              <td>5:00pm</td>
+              <td>-</td>
+              <td>10:00pm</td>
+            </tr>
+            <tr>
+              <td>9<sup>th</sup></td>
+              <td>|</td>
+              <td><b>Saturday</b></td>
+              <td>11:00am</td>
+              <td>-</td>
+              <td>10:00pm</td>
+            </tr>
+            <tr>
+              <td>10<sup>th</sup></td>
+              <td>|</td>
+              <td><b>Sunday</b></td>
+              <td>11:00am</td>
+              <td>-</td>
+              <td>10:00pm</td>
+            </tr>
+          </table>
+        </div>
+      </v-flex>
+    </v-layout>
     
   </div>
 </template>
@@ -35,7 +65,7 @@
 
 <style lang="scss">
   .sdtet-jumbotron{
-    background-image: url('../../assets/blossoms-banner.png');
+    background-color: #023C52;
   }
   .sdtet-banner-message{
     padding-left: 20px;
@@ -52,5 +82,17 @@
     .sdtet-jumbotron{
       height: 370px!important;
     }
+  }
+  .sdtet-center-logo{
+    height: 220px;
+    margin-top: 40px;
+  }
+  .sdtet-date-container{
+    width: 520px;
+    padding-top: 50px;
+    font-size: 16px;
+  }
+  td{
+    padding-right: 7px;
   }
 </style>

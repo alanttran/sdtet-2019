@@ -40,14 +40,6 @@
                 </v-btn>
               </v-flex>
               <v-flex xs6 sm6 lg6>
-                <v-btn class="sdtet-wrap-text" flat color="pink" style="height: auto" href="https://goo.gl/forms/Q67Pl4yvXMdUSUJv1" target="_blank">
-                  <div class="pa-2 sdtet-text-align-center">
-                    <img height="100" src="./assets/MissVietnam_Logo.png"><br/>
-                    Miss Vietnam 2019 Application
-                  </div>
-                </v-btn>
-              </v-flex>
-              <v-flex xs6 sm6 lg6>
                 <v-btn class="sdtet-wrap-text" flat color="teal" style="height: auto" href="https://docs.google.com/forms/d/1bxjmW1YjVQ9w75CITudI0XXj-m861T-kfneH2z_F9_0" target="_blank">
                   <div class="pa-2 sdtet-text-align-center">
                     <img height="100" src="./assets/Volunteer.svg"><br/>
@@ -62,7 +54,15 @@
                     Sponsors 2019
                   </div>
                 </v-btn>
-              </v-flex>                      
+              </v-flex>
+              <v-flex xs6 sm6 lg6>
+                <v-btn class="sdtet-wrap-text" flat color="teal" style="height: auto" href="https://goo.gl/forms/8g5sYd9j9npRrRDF3" target="_blank">
+                  <div class="pa-2 sdtet-text-align-center">
+                    <img height="100" src="./assets/Volunteer.svg"><br/>
+                    Golden Voice 2019
+                  </div>
+                </v-btn>
+              </v-flex>                       
             </v-layout>
           </v-card-text>
   
