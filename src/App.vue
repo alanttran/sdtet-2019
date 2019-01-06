@@ -11,75 +11,6 @@
         <volunteers></volunteers>
         <sponsors></sponsors>
         <directions></directions>
-        <v-dialog
-        v-model="dialog"
-        width="600"
-      >
-  
-        <v-card>
-          <v-card-title
-            class="headline grey lighten-2"
-            primary-title
-          >
-            We are working on the new website!
-          </v-card-title>
-  
-          <v-card-text>
-            Join us next year on Feb 8-10, 2019! More applications coming soon! If you have any questions, email <b>info@sdtet.com</b>. <br/>
-            <v-layout row wrap justify-space-around class="sdtet-text-align-center">
-              <v-flex xs6 sm6 lg6>
-                <br/><br/><br/>
-                Food Vendor applications are full. Please email vendor@sdtet.com if you have any questions. 
-              </v-flex>
-              <v-flex xs6 sm6 lg6>
-                <v-btn class="sdtet-button-flat-button sdtet-wrap-text" flat color="teal" href="https://docs.google.com/forms/d/e/1FAIpQLSdL6Xf-TZOjUR3yzvCneQSUqzTqxwSHkfA1OhgHR7XgK7IqBw/viewform" target="_blank">
-                  <div class="pa-2 sdtet-text-align-center">
-                    <img src="./assets/GameBooth.svg"><br/>
-                    Vendor Application 2019
-                  </div>
-                </v-btn>
-              </v-flex>
-              <v-flex xs6 sm6 lg6>
-                <v-btn class="sdtet-wrap-text" flat color="teal" style="height: auto" href="https://docs.google.com/forms/d/1bxjmW1YjVQ9w75CITudI0XXj-m861T-kfneH2z_F9_0" target="_blank">
-                  <div class="pa-2 sdtet-text-align-center">
-                    <img height="100" src="./assets/Volunteer.svg"><br/>
-                    Volunteers 2019
-                  </div>
-                </v-btn>
-              </v-flex>
-              <v-flex xs6 sm6 lg6>
-                <v-btn class="sdtet-wrap-text" flat color="teal" style="height: auto" href="https://s3-us-west-1.amazonaws.com/sdtet/documents/VAYA_Sponsorship_2018_v1hi-res.pdf" target="_blank">
-                  <div class="pa-2 sdtet-text-align-center">
-                    <img height="100" src="./assets/Volunteer.svg"><br/>
-                    Sponsors 2019
-                  </div>
-                </v-btn>
-              </v-flex>
-              <v-flex xs6 sm6 lg6>
-                <v-btn class="sdtet-wrap-text" flat color="teal" style="height: auto" href="https://goo.gl/forms/8g5sYd9j9npRrRDF3" target="_blank">
-                  <div class="pa-2 sdtet-text-align-center">
-                    <img height="100" src="./assets/Volunteer.svg"><br/>
-                    Golden Voice 2019
-                  </div>
-                </v-btn>
-              </v-flex>                       
-            </v-layout>
-          </v-card-text>
-  
-          <v-divider></v-divider>
-  
-          <v-card-actions>
-            <v-spacer></v-spacer>
-            <v-btn
-              color="primary"
-              flat
-              @click="dialog = false"
-            >
-              Close
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-dialog>
       </v-content>
     </v-app>
   </div>
@@ -121,5 +52,5 @@
 </script>
 
 <style lang="scss">
-  @import 'theme/style.scss';
+@import 'theme/style.scss';
 </style>

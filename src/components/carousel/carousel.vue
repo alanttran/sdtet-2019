@@ -6,6 +6,7 @@
     <v-layout column align-center justify-center class="sdtet-container">
       <!-- <h1>San Diego Tết Festival 2018<br/>Spring Blossoms - Mira Mesa<br/>February 16 - 18, 2018</h1> -->
       <img class="sdtet-center-logo" src="../../assets/pig-logo.svg" alt="">
+      <span style="font-family: 'Verdana'"><br/>MIRA MESA COMMUNITY PARK - FREE ADMISSION</span>
       <!-- <v-btn href="#entertainment" large round color="teal" dark v-smooth-scroll><v-icon left style="width:20px;">movie creation</v-icon>Join our entertainment!</v-btn> -->
       <!-- <v-btn href="#sdtet-vendors-section" large round color="teal" dark v-smooth-scroll><v-icon left style="width:20px;">store</v-icon>Become a vendor!</v-btn>
       <v-btn href="#sdtet-sponsors-section" large round color="teal" dark v-smooth-scroll><v-icon left style="width:20px;">business center</v-icon>Sponsor us!</v-btn> -->
@@ -18,25 +19,29 @@
               <td>8<sup>th</sup></td>
               <td>|</td>
               <td><b>Friday</b></td>
-              <td>5:00pm</td>
+              <td style="text-align: right">5:00 pm</td>
               <td>-</td>
-              <td>10:00pm</td>
+              <td>10:00 pm</td>
             </tr>
             <tr>
               <td>9<sup>th</sup></td>
               <td>|</td>
               <td><b>Saturday</b></td>
-              <td>11:00am</td>
+              <td style="text-align: right">11:00 am</td>
               <td>-</td>
-              <td>10:00pm</td>
+              <td>10:00 pm</td>
             </tr>
             <tr>
               <td>10<sup>th</sup></td>
               <td>|</td>
               <td><b>Sunday</b></td>
-              <td>11:00am</td>
+              <td style="text-align: right">11:00 am</td>
               <td>-</td>
-              <td>10:00pm</td>
+              <td>10:00 pm*</td>
+            </tr>
+            <tr>
+              <td colspan="2"></td>
+              <td colspan="4"><small>* Tết Festival ends at 8pm, carnival ends at 10pm</small></td>
             </tr>
           </table>
         </div>
@@ -84,12 +89,12 @@
     }
   }
   .sdtet-center-logo{
-    height: 220px;
+    height: 180px;
     margin-top: 40px;
   }
   .sdtet-date-container{
     width: 520px;
-    padding-top: 50px;
+    padding-top:30px;
     font-size: 16px;
   }
   td{

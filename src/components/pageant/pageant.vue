@@ -1,5 +1,7 @@
 <template>
+
   <div id="sdtet-pageant-section" class="sdtet-container">
+    <br/>
     <h1 class="sdtet-text-align-center">{{pageantData.title}}</h1>
     <div class="sdtet-text-align-center">
       <div v-if="!pageantData.signups_open">
@@ -19,14 +21,10 @@
       </div>
     </div>
     <br/>
-    <h2 class="sdtet-text-align-center">Royal Court 2017 Project - Project Homecoming</h2>
-    <p class="sdtet-text-align-center">Amazing work Diana Pham, Lynn Huynh and Tiffany Luu!</p>
-    <iframe style="display: block; margin:auto"  width="560" height="315" src="https://www.youtube.com/embed/zelKTIXD864?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    <br/>
     <h1 class="sdtet-text-align-center">Pageant {{pageantData.pageant_year}}</h1>
     <h2 class="sdtet-text-align-center">{{pageantData.slogan}}</h2>
-
-    <v-container mb-4>
+    <div class="sdtet-text-align-center"><img style="height: 600px;" src="../../assets/pageant-preview-2019.png" alt=""></div>
+    <!-- <v-container mb-4>
       <v-layout id="contestants" row wrap>
         <v-flex v-for="contestant in contestants" :key="contestant.id" xs12 sm6 md4 lg3>
           <v-card height="720px" class="ma-1">
@@ -46,7 +44,7 @@
           </v-card>
         </v-flex>
       </v-layout>
-    </v-container>
+    </v-container> -->
   </div>
 </template>
 
