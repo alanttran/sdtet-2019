@@ -16,7 +16,7 @@
 							<div>Do you love dancing? If you have an up and coming team or a new choreography to try, why not bring yourselves to our stage and wow us for the new year!</div>
 
               <p v-if="stepUpDanceTimeLeft < 0"><br/>Check out the competition at <b>Main Stage - Friday Feb 8 at 8:00pm!</b></p>
-
+              
               <div v-if="stepUpDanceTimeLeft >= 0"><b>Deadline: {{stepUpDanceEnd}}</b></div>              
             </v-card-title>
             <v-card-actions>

@@ -21,7 +21,7 @@
               <td><b>Friday</b></td>
               <td style="text-align: right">5:00 pm</td>
               <td>-</td>
-              <td>10:00 pm</td>
+              <td style="text-align: right">10:00 pm</td>
             </tr>
             <tr>
               <td>9<sup>th</sup></td>
@@ -29,7 +29,7 @@
               <td><b>Saturday</b></td>
               <td style="text-align: right">11:00 am</td>
               <td>-</td>
-              <td>10:00 pm</td>
+              <td style="text-align: right">10:00 pm</td>
             </tr>
             <tr>
               <td>10<sup>th</sup></td>
@@ -37,11 +37,11 @@
               <td><b>Sunday</b></td>
               <td style="text-align: right">11:00 am</td>
               <td>-</td>
-              <td>10:00 pm*</td>
+              <td style="text-align: right">9:00 pm*</td>
             </tr>
             <tr>
               <td colspan="2"></td>
-              <td colspan="4"><small>* Tết Festival ends at 8pm, carnival ends at 10pm</small></td>
+              <td colspan="4"><small>* <b>Tết Festival</b> ends at 6pm, <b>Carnival</b> ends at 9pm</small></td>
             </tr>
           </table>
         </div>
@@ -83,9 +83,6 @@
     }
     .sdtet-message-1{
       display: none;
-    }
-    .sdtet-jumbotron{
-      height: 370px!important;
     }
   }
   .sdtet-center-logo{

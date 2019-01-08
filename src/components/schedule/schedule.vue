@@ -8,65 +8,65 @@
         <v-layout row class="sdtet-schedule-grid">
 
           <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-title sdtet-text-align-right ">Main Stage</v-flex>
-          <v-flex xs2 sm2 md2 lg2 class="sdtet-schedule-date pa-2">FRIDAY 02.08.19</v-flex>
+          <v-flex xs2 sm2 md2 lg2 class="sdtet-schedule-date pa-2">FRIDAY FEB 08</v-flex>
           <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-title sdtet-text-align-left ">Cultural Village</v-flex>
           <div class="sdtet-schedule-divider"></div>
-          <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-title sdtet-text-align-right "></v-flex>
+          <!-- <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-title sdtet-text-align-right "></v-flex>
           <v-flex xs2 sm2 md2 lg2 class="sdtet-schedule-date pa-2">TBA</v-flex>
-          <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-title sdtet-text-align-left "></v-flex>
+          <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-title sdtet-text-align-left "></v-flex> -->
           <!-- Friday -->
-          <!-- <template v-for="(events, start_time) in friday">
+          <template v-for="(events, start_time) in friday">
             <v-flex v-if="events[0]" xs5 sm5 md5 lg5 class="sdtet-schedule-main-stage">{{events[0].english_event}}
             </v-flex>
             <v-flex v-else xs5 sm5 md5 lg5 class="sdtet-schedule-main-stage"></v-flex>
-            <v-flex xs2 sm2 md2 lg2 class="sdtet-schedule-date pa-2">{{start_time}}</v-flex>
+            <v-flex xs2 sm2 md2 lg2 class="sdtet-schedule-date pa-2">{{start_time}} </v-flex>
             <v-flex v-if="events[1]" xs5 sm5 md5 lg5 class="sdtet-schedule-cultural-village">
-              {{events[1].english_event}}
+              <!-- {{events[1].english_event}} -->
             </v-flex>
             <v-flex v-else xs5 sm5 md5 lg5 class="sdtet-schedule-cultural-village"></v-flex>
-          </template> -->
+          </template>
 
           <!-- Saturday -->
           <div class="sdtet-schedule-spacer"></div>
           <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-title sdtet-text-align-right">Main Stage</v-flex>
-          <v-flex xs2 sm2 md2 lg2 class="sdtet-schedule-date pa-2">SATURDAY 02.09.19</v-flex>
+          <v-flex xs2 sm2 md2 lg2 class="sdtet-schedule-date pa-2">SATURDAY FEB 09</v-flex>
           <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-title sdtet-text-align-left">Cultural Village</v-flex>
           <div class="sdtet-schedule-divider"></div>
           
-          <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-title sdtet-text-align-right "></v-flex>
+          <!-- <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-title sdtet-text-align-right "></v-flex>
           <v-flex xs2 sm2 md2 lg2 class="sdtet-schedule-date pa-2">TBA</v-flex>
-          <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-title sdtet-text-align-left "></v-flex>
-          <!-- <template v-for="(events, start_time) in saturday">
+          <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-title sdtet-text-align-left "></v-flex> -->
+          <template v-for="(events, start_time) in saturday">
             <v-flex v-if="events[0]" xs5 sm5 md5 lg5 class="sdtet-schedule-main-stage">{{events[0].english_event}}
             </v-flex>
             <v-flex v-else xs5 sm5 md5 lg5 class="sdtet-schedule-main-stage"></v-flex>
-            <v-flex xs2 sm2 md2 lg2 class="sdtet-schedule-date pa-2">{{start_time}}</v-flex>
+            <v-flex xs2 sm2 md2 lg2 class="sdtet-schedule-date pa-2">{{start_time}} </v-flex>
             <v-flex v-if="events[1]" xs5 sm5 md5 lg5 class="sdtet-schedule-cultural-village">
-              {{events[1].english_event}}
+              <!-- {{events[1].english_event}} -->
             </v-flex>
             <v-flex v-else xs5 sm5 md5 lg5 class="sdtet-schedule-cultural-village"></v-flex>
-          </template> -->
+          </template>
 
           <!-- Sunday -->
           <div class="sdtet-schedule-spacer"></div>
           <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-title sdtet-text-align-right">Main Stage</v-flex>
-          <v-flex xs2 sm2 md2 lg2 class="sdtet-schedule-date pa-2">SUNDAY 02.10.19</v-flex>
+          <v-flex xs2 sm2 md2 lg2 class="sdtet-schedule-date pa-2">SUNDAY FEB 10</v-flex>
           <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-title sdtet-text-align-left">Cultural Village</v-flex>
           <div class="sdtet-schedule-divider"></div>
 
-          <!-- <template v-for="(events, start_time) in sunday">
+          <template v-for="(events, start_time) in sunday">
             <v-flex v-if="events[0]" xs5 sm5 md5 lg5 class="sdtet-schedule-main-stage">{{events[0].english_event}}
             </v-flex>
             <v-flex v-else xs5 sm5 md5 lg5 class="sdtet-schedule-main-stage"></v-flex>
-            <v-flex xs2 sm2 md2 lg2 class="sdtet-schedule-date pa-2">{{start_time}}</v-flex>
+            <v-flex xs2 sm2 md2 lg2 class="sdtet-schedule-date pa-2">{{start_time}} <div v-if="start_time == '9:00 PM'">Carnival Closes</div> <div v-if="start_time == '6:00 PM'">Festival Closes</div></v-flex>
             <v-flex v-if="events[1]" xs5 sm5 md5 lg5 class="sdtet-schedule-cultural-village">
-              {{events[1].english_event}}
+              <!-- {{events[1].english_event}} -->
             </v-flex>
             <v-flex v-else xs5 sm5 md5 lg5 class="sdtet-schedule-cultural-village"></v-flex>
-          </template> -->
-          <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-title sdtet-text-align-right "></v-flex>
+          </template>
+          <!-- <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-title sdtet-text-align-right "></v-flex>
           <v-flex xs2 sm2 md2 lg2 class="sdtet-schedule-date pa-2">TBA</v-flex>
-          <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-title sdtet-text-align-left "></v-flex>
+          <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-title sdtet-text-align-left "></v-flex> -->
           <div class="sdtet-schedule-spacer"></div>
         </v-layout>
       </v-layout>
