@@ -5,7 +5,7 @@
     <h1 class="sdtet-text-align-center">{{pageantData.title}}</h1>
     <div class="sdtet-text-align-center">
       <div v-if="!pageantData.signups_open">
-        <p><span class="navy"><b>Signups are closed! Stay tuned for more updates!</b></span></p>
+        <p><span class="navy"><b>Join us on Saturday Feb 9th at 5:30PM on the main stage to cheer on our girls!</b></span></p>
       </div>
       <div v-else>
         <v-btn href="https://goo.gl/forms/Q67Pl4yvXMdUSUJv1" target="_blank" large round color="teal" dark v-smooth-scroll >Sign up for Pageant 2019!</v-btn>
@@ -22,19 +22,19 @@
     </div>
     <br/>
     <h1 class="sdtet-text-align-center">Pageant {{pageantData.pageant_year}}</h1>
-    <h2 class="sdtet-text-align-center">{{pageantData.slogan}}</h2>
-    <div class="sdtet-text-align-center"><img style="height: 600px;" src="../../assets/pageant-preview-2019.png" alt=""></div>
-    <!-- <v-container mb-4>
+    <!-- <h2 class="sdtet-text-align-center">{{pageantData.slogan}}</h2>
+    <div class="sdtet-text-align-center"><img style="height: 600px;" src="../../assets/pageant-preview-2019.png" alt=""></div> -->
+    <v-container mb-4>
       <v-layout id="contestants" row wrap>
         <v-flex v-for="contestant in contestants" :key="contestant.id" xs12 sm6 md4 lg3>
-          <v-card height="720px" class="ma-1">
+          <v-card height="600px" class="ma-1">
             <v-card-media :src="contestant.main_image_link" height="300px" style="background-position: center top">
             </v-card-media>
             <v-card-title primary-title>
               <div>
                 <h3 class="headline mb-3">{{contestant.pageant_number}}. {{contestant.first_name}} {{contestant.last_name}}</h3>
                 <h4 class="headline mb-3" style="color: red">{{contestant.title}}</h4>
-                <p>{{contestant.school}}</p>
+                <p><i>{{contestant.school}}</i></p>
                 <p>"{{contestant.bio}}"</p>
               </div>
             </v-card-title>
@@ -44,7 +44,7 @@
           </v-card>
         </v-flex>
       </v-layout>
-    </v-container> -->
+    </v-container>
   </div>
 </template>
 

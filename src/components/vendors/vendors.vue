@@ -12,7 +12,8 @@
 				</v-flex>
 				<v-flex xs12 md6 lg6 class="sdtet-text-align-center">
 					<div class="sdtet-h1-spacer"><h1>&nbsp;</h1></div>
-					<h2>Select your booth to apply/pay</h2>
+					<h2>Select your booth to <b>pay</b></h2>
+					<p>Vendor spots are all full!</p>
 					<v-layout row wrap justify-space-around>
 						<v-flex xs6 sm6 lg6><GameCommercialBooth></GameCommercialBooth></v-flex>
 						<v-flex xs6 sm6 lg6><InfoArtBooth></InfoArtBooth></v-flex>

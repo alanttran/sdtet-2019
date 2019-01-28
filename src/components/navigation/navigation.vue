@@ -9,6 +9,7 @@
       <v-flex><a href="#sdtet-vendors-section" v-smooth-scroll>Vendors</a></v-flex>
       <v-flex><a href="#sdtet-volunteers-section" v-smooth-scroll>Volunteers</a></v-flex>
       <v-flex><a href="#sdtet-sponsors-section" v-smooth-scroll>Sponsors</a></v-flex>
+      <v-flex><a href="#sdtet-about-section" v-smooth-scroll>About</a></v-flex>
       <v-flex><a href="#sdtet-contact-section" v-smooth-scroll>Contact</a></v-flex>
       <v-flex><a href="https://www.paypal.com/fundraiser/charity/1440775" target="_blank">Donate</a></v-flex>
     </v-layout>
@@ -32,6 +33,9 @@
           </v-list-tile>
           <v-list-tile>
             <a href="#sdtet-sponsors-section" v-smooth-scroll><v-list-tile-title>Sponsors</v-list-tile-title></a>
+          </v-list-tile>
+          <v-list-tile>
+            <a href="#sdtet-about-section" v-smooth-scroll><v-list-tile-title>About</v-list-tile-title></a>
           </v-list-tile>
           <v-list-tile>
             <a href="#sdtet-contact-section" v-smooth-scroll><v-list-tile-title>Contact</v-list-tile-title></a>

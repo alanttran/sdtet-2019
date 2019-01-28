@@ -11,7 +11,8 @@
 			<v-card-title class="headline">Non-profit or Government</v-card-title>
 			<v-card-text>
 				<v-alert outline color="info" icon="info" :value="true">
-					<b>Apply:</b>&nbsp; <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdL6Xf-TZOjUR3yzvCneQSUqzTqxwSHkfA1OhgHR7XgK7IqBw/viewform">Vendor Form</a>
+					<!-- <b>Apply:</b>&nbsp; <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdL6Xf-TZOjUR3yzvCneQSUqzTqxwSHkfA1OhgHR7XgK7IqBw/viewform">Vendor Form</a> -->
+					Vendor spots are all filled. Please contact <b>vendor@sdtet.com</b> if you have any questions
 				</v-alert>
 				<v-layout>
 					<v-flex sm6 md6 lg6>

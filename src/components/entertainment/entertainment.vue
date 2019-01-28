@@ -20,7 +20,7 @@
               <div v-if="stepUpDanceTimeLeft >= 0"><b>Deadline: {{stepUpDanceEnd}}</b></div>              
             </v-card-title>
             <v-card-actions>
-              <v-btn v-if="stepUpDanceTimeLeft >= 0" href="https://goo.gl/forms/m72AzVtjPkrpAPUw2" target="_blank" block outline round color="teal" dark>Sign up! <span v-if="stepUpDanceTimeLeft < 10">{{stepUpDanceTimeLeft}} days left!</span> </v-btn>
+              <v-btn v-if="stepUpDanceTimeLeft >= 0" href="https://goo.gl/forms/m72AzVtjPkrpAPUw2" target="_blank" block outline round color="teal" dark>Sign up! <span v-if="stepUpDanceTimeLeft < 10">&nbsp;- {{stepUpDanceTimeLeft}} days left!</span> </v-btn>
               
             </v-card-actions>
           </v-card>
@@ -77,6 +77,25 @@
           </v-card>
         </v-flex>
 
+        <v-flex sm12 md4 lg3>
+          <v-card class="sdtet-entertainment-card">
+            <v-card-media src="http://purrfectcatbreeds.com/wp-content/uploads/2016/06/cute-cat-halloween-costumes.jpg" height="200px">
+            </v-card-media>
+            <v-card-title primary-title>
+              <div>
+                <h3 class="headline mb-3">Pet Costume Contest</h3>
+                <div>We heard you loved the dog costume contest last year and we are excited to bring this back for ALL pets!</div><br/>
+                  
+                <p><b>First 30 to sign up on Sunday at Cultural Village 3:00PM will be in the contest at 4:00PM.</b></p>
+                  
+              </div>
+            </v-card-title>
+            <v-card-actions>
+              
+            </v-card-actions>
+          </v-card>
+        </v-flex>
+
       </v-layout>
 
     </div>
@@ -101,7 +120,7 @@
       var todaysdate = moment()
 
       var stepUpDanceDate = moment('2019-02-01')
-      var kidsSpotlightDate = moment('2019-01-12')
+      var kidsSpotlightDate = moment('2019-01-19')
       var goldenVoiceDate = moment('2019-02-03')
 
       this.stepUpDanceEnd = stepUpDanceDate.format('LL')

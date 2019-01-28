@@ -10,6 +10,7 @@
         <vendors></vendors>
         <volunteers></volunteers>
         <sponsors></sponsors>
+        <about></about>
         <directions></directions>
       </v-content>
     </v-app>
@@ -27,6 +28,7 @@
   import Volunteers from './components/volunteers/volunteers'
   import Directions from './components/directions/directions'
   import Contact from './components/contact/contact'
+  import About from './components/about/about'
 
   export default {
     name: 'app',
@@ -40,7 +42,8 @@
       Vendors,
       Volunteers,
       Directions,
-      Contact
+      Contact,
+      About
     },
     data () {
       return {
