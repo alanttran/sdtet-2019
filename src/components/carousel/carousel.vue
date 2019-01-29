@@ -2,7 +2,7 @@
   <!-- <v-carousel>
     <v-carousel-item v-for="(item,i) in items" v-bind:src="item.src" :key="i"></v-carousel-item>
   </v-carousel> -->
-  <div class="sdtet-jumbotron">
+  <div id="sdtet-schedule-section"  class="sdtet-jumbotron">
     <v-layout column align-center justify-center class="sdtet-container">
       <!-- <h1>San Diego Tết Festival 2018<br/>Spring Blossoms - Mira Mesa<br/>February 16 - 18, 2018</h1> -->
       <img class="sdtet-center-logo" src="../../assets/pig-logo.svg" alt="">

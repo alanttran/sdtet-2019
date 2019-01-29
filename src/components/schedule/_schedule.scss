@@ -1,6 +1,132 @@
+$sdtet-schedule-text-shadow: -1px -1px 2px white,
+    1px -1px 2px white,
+    -1px 1px 2px white,
+    1px 1px 2px white;
+
 .sdtet-schedule-background {
-	background-image: url('../../assets/dog-festival-bg-translucent.png');
+position: relative;
 }
+
+.sdtet-schedule-saturday-image-1{
+  background-image: url('../../assets/JrodTwins.png');
+  position: absolute;
+  z-index: 0;
+  top: calc(38% + 5px);
+  left: 0;
+  width: 500px;
+  height: 378px;
+  &:before{
+    content:"JRod Twins - Jason & Justin";
+    color: white;
+    position: absolute;
+    bottom: 60px;
+    font-size: 18px;
+    left: 50px;
+    font-weight: 600;
+    text-shadow: 0 0 2px black;
+  }
+}
+
+.sdtet-schedule-saturday-image-2{
+  background-image: url('../../assets/TrucLam-TrucLinh.png');
+  position: absolute;
+  z-index: 0;
+  top: calc(38% + 5px);
+  right: 80px;
+  width: 400px;
+  height: 378px;
+  &:before{
+    content:"Truc Lam & Truc Linh";
+    color: white;
+    position: absolute;
+    bottom: 50px;
+    font-size: 18px;
+    left: 140px;
+    font-weight: 600;
+    text-shadow: 0 0 2px black;
+  }
+}
+
+.sdtet-schedule-saturday-image-3{
+  background-image: url('../../assets/DiepThanhThanh.png');
+  position: absolute;
+  z-index: 0;
+  bottom: 17px;
+  left: 80px;
+  width: 400px;
+  height: 419px;
+  &:before{
+    content:"Diep Thanh Thanh";
+    color: white;
+    position: absolute;
+    bottom: 30px;
+    font-size: 18px;
+    left: 100px;
+    font-weight: 600;
+    text-shadow: 0 0 2px black;
+  }
+}
+
+.sdtet-schedule-saturday-image-4{
+  background-image: url('../../assets/TuanQuynh.png');
+  position: absolute;
+  z-index: 0;
+  bottom: 17px;
+  right: 80px;
+  width: 400px;
+  height: 410px;
+  &:before{
+    content:"Tuan Quynh";
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    font-size: 18px;
+    left: 150px;
+    font-weight: 600;
+    text-shadow: 0 0 2px black;
+  }
+}
+
+.sdtet-schedule-saturday-image-5{
+  background-image: url('../../assets/stepupdance.png');
+  position: absolute;
+  z-index: 0;
+  top: 12%;
+  left: 100px;
+  width: 400px;
+  height: 251px;
+  &:before{
+    content:"Step Up Dance Competition";
+    color: white;
+    position: absolute;
+    bottom: 50px;
+    font-size: 18px;
+    left: 50px;
+    font-weight: 600;
+    text-shadow: 0 0 2px black;
+  }
+}
+
+.sdtet-schedule-saturday-image-6{
+  background-image: url('../../assets/lion-dancing.png');
+  position: absolute;
+  z-index: 0;
+  top: 155px;
+  right: 100px;
+  width: 400px;
+  height: 276px;
+  &:before{
+    content:"Lion Dancing";
+    color: white;
+    position: absolute;
+    bottom: 50px;
+    font-size: 18px;
+    right: 50px;
+    font-weight: 600;
+    text-shadow: 0 0 2px black;
+  }
+}
+
 
 .sdtet-schedule-container {
     text-align: center;
@@ -16,13 +142,17 @@
 }
 
 .sdtet-schedule-grid {
-    align-items: center;
-}
-
-.sdtet-schedule-grid {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    position: absolute;
+    z-index: 4;
+    top: 180px;
+    width:100%;
+    max-width: 1300px;
+    left: calc(50% - 650px);
+    align-items: center;
+    text-shadow: $sdtet-schedule-text-shadow;
 }
 
 .sdtet-schedule-title {}

@@ -1,16 +1,26 @@
 <template>
   <div class="sdtet-schedule-background">
-    <div id="sdtet-schedule-section" class="sdtet-schedule-container sdtet-container">
+
+    <div class="sdtet-schedule-container sdtet-container" style="height: 1700px">
+
       <br/>
       <h1>Event Schedule</h1>
       <p>Events and times can change without notice</p>
       <v-layout align-center>
-        <v-layout row class="sdtet-schedule-grid">
 
-          <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-title sdtet-text-align-right ">Main Stage</v-flex>
-          <v-flex xs2 sm2 md2 lg2 class="sdtet-schedule-date pa-2">FRIDAY FEB 08</v-flex>
-          <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-title sdtet-text-align-left ">Cultural Village</v-flex>
-          <div class="sdtet-schedule-divider"></div>
+        <v-layout row class="sdtet-schedule-grid">
+          <div class="sdtet-schedule-saturday-image-1"></div>
+          <div class="sdtet-schedule-saturday-image-2"></div>
+          <div class="sdtet-schedule-saturday-image-3"></div>
+          <div class="sdtet-schedule-saturday-image-4"></div>
+          <div class="sdtet-schedule-saturday-image-5"></div>
+          <div class="sdtet-schedule-saturday-image-6"></div>
+          <v-layout row style="position: relative; flex-wrap: wrap">
+            
+            <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-title sdtet-text-align-right ">Main Stage</v-flex>
+            <v-flex xs2 sm2 md2 lg2 class="sdtet-schedule-date pa-2">FRIDAY FEB 08</v-flex>
+            <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-title sdtet-text-align-left ">Cultural Village</v-flex>
+            <div class="sdtet-schedule-divider"></div>
           <!-- <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-title sdtet-text-align-right "></v-flex>
           <v-flex xs2 sm2 md2 lg2 class="sdtet-schedule-date pa-2">TBA</v-flex>
           <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-title sdtet-text-align-left "></v-flex> -->
@@ -70,8 +80,9 @@
           <div class="sdtet-schedule-spacer"></div>
         </v-layout>
       </v-layout>
-    </div>
+    </v-layout>
   </div>
+</div>
 </template>
 
 <script type="text/javascript">

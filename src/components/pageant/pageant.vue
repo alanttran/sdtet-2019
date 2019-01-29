@@ -22,15 +22,15 @@
     </div>
     <br/>
     <h1 class="sdtet-text-align-center">Pageant {{pageantData.pageant_year}}</h1>
-    <!-- <h2 class="sdtet-text-align-center">{{pageantData.slogan}}</h2>
-    <div class="sdtet-text-align-center"><img style="height: 600px;" src="../../assets/pageant-preview-2019.png" alt=""></div> -->
+    <h2 class="sdtet-text-align-center">{{pageantData.slogan}}</h2>
+    <!-- <div class="sdtet-text-align-center"><img style="height: 600px;" src="../../assets/pageant-preview-2019.png" alt=""></div> -->
     <v-container mb-4>
       <v-layout id="contestants" row wrap>
         <v-flex v-for="contestant in contestants" :key="contestant.id" xs12 sm6 md4 lg3>
-          <v-card height="600px" class="ma-1">
-            <v-card-media :src="contestant.main_image_link" height="300px" style="background-position: center top">
+          <v-card height="670px" class="ma-1" style="display: flex; flex-direction: column">
+            <v-card-media :src="contestant.main_image_link" height="300px" style="background-position: center top; flex: none">
             </v-card-media>
-            <v-card-title primary-title>
+            <v-card-title primary-title class="pb-0" style="flex: 300px; align-items: start">
               <div>
                 <h3 class="headline mb-3">{{contestant.pageant_number}}. {{contestant.first_name}} {{contestant.last_name}}</h3>
                 <h4 class="headline mb-3" style="color: red">{{contestant.title}}</h4>
@@ -38,8 +38,8 @@
                 <p>"{{contestant.bio}}"</p>
               </div>
             </v-card-title>
-            <v-card-actions>
-              <v-btn v-if="pageantData.voting" :href="contestant.fb_link" target="_blank" block outline round color="teal" dark>Vote for me!</v-btn>
+            <v-card-actions class="pb-3 pt-0" style="flex: none">
+              <v-btn v-if="pageantData.voting" :href="contestant.fb_link" target="_blank" block outline round color="teal" dark>Vote for {{contestant.first_name}}!</v-btn>
             </v-card-actions>
           </v-card>
         </v-flex>
