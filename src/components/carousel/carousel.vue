@@ -3,10 +3,10 @@
     <v-carousel-item v-for="(item,i) in items" v-bind:src="item.src" :key="i"></v-carousel-item>
   </v-carousel> -->
   <div id="sdtet-schedule-section"  class="sdtet-jumbotron">
-    <v-layout column align-center justify-center class="sdtet-container">
+    <v-layout column align-center justify-center class="sdtet-container pa-4" >
       <!-- <h1>San Diego Tết Festival 2018<br/>Spring Blossoms - Mira Mesa<br/>February 16 - 18, 2018</h1> -->
       <img class="sdtet-center-logo" src="../../assets/pig-logo.svg" alt="">
-      <span style="font-family: 'Verdana'"><br/>MIRA MESA COMMUNITY PARK - FREE ADMISSION</span>
+      <span class="" style="font-family: 'Verdana'"><br/>MIRA MESA COMMUNITY PARK - FREE ADMISSION</span>
       <!-- <v-btn href="#entertainment" large round color="teal" dark v-smooth-scroll><v-icon left style="width:20px;">movie creation</v-icon>Join our entertainment!</v-btn> -->
       <!-- <v-btn href="#sdtet-vendors-section" large round color="teal" dark v-smooth-scroll><v-icon left style="width:20px;">store</v-icon>Become a vendor!</v-btn>
       <v-btn href="#sdtet-sponsors-section" large round color="teal" dark v-smooth-scroll><v-icon left style="width:20px;">business center</v-icon>Sponsor us!</v-btn> -->
@@ -86,7 +86,9 @@
     }
   }
   .sdtet-center-logo{
-    height: 180px;
+    max-height: 180px;
+    width: 100%;
+    max-width: 375px;
     margin-top: 40px;
   }
   .sdtet-date-container{

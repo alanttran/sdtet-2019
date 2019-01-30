@@ -1,7 +1,7 @@
 <template>
   <div class="sdtet-schedule-background">
 
-    <div class="sdtet-schedule-container sdtet-container" style="height: 1700px">
+    <div class="sdtet-schedule-container sdtet-container">
 
       <br/>
       <h1>Event Schedule</h1>

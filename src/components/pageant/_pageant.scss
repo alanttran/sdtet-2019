@@ -1,7 +1,22 @@
-@media screen and (max-width: 768px) {
-  .ms-vn-logo {
+#sdtet-pageant-section.sdtet-container{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.ms-vn-logo {
     height: 250px;
     width: auto;
-  }
+
+    @media screen and (max-width: 960px) {
+        display: none;
+    }
 }
+
+.ms-vn-text{
+	@media screen and (max-width: 960px) {
+        display: none;
+    }
+}
+
+
 

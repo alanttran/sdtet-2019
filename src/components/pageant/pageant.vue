@@ -16,7 +16,7 @@
     <div class="ml-5 mr-5">
 
       <img class="ms-vn-logo ml-2 mb-2" style="float: right; max-width: 100%;" src="../../assets/MissVietnam_Logo.png">
-      <div v-for="text in pageantData.text" :key="text.id">
+      <div class="ms-vn-text" v-for="text in pageantData.text" :key="text.id">
         <p>{{text}}</p>
       </div>
     </div>
