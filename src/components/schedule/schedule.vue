@@ -26,14 +26,13 @@
           <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-title sdtet-text-align-left "></v-flex> -->
           <!-- Friday -->
           <template v-for="(events, start_time) in friday">
-            <v-flex v-if="events[0]" xs5 sm5 md5 lg5 class="sdtet-schedule-main-stage">{{events[0].english_event}}
+            <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-main-stage">
+              {{events[0] ? events[0].english_event: ""}}
             </v-flex>
-            <v-flex v-else xs5 sm5 md5 lg5 class="sdtet-schedule-main-stage"></v-flex>
             <v-flex xs2 sm2 md2 lg2 class="sdtet-schedule-date pa-2">{{start_time}} </v-flex>
-            <v-flex v-if="events[1]" xs5 sm5 md5 lg5 class="sdtet-schedule-cultural-village">
-              {{events[1].english_event}}
+            <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-cultural-village">
+              {{events[1] ? events[1].english_event : ""}}
             </v-flex>
-            <v-flex v-else xs5 sm5 md5 lg5 class="sdtet-schedule-cultural-village"></v-flex>
           </template>
 
           <!-- Saturday -->
@@ -46,16 +45,15 @@
           <!-- <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-title sdtet-text-align-right "></v-flex>
           <v-flex xs2 sm2 md2 lg2 class="sdtet-schedule-date pa-2">TBA</v-flex>
           <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-title sdtet-text-align-left "></v-flex> -->
-          <template v-for="(events, start_time) in saturday">
-            <v-flex v-if="events[0]" xs5 sm5 md5 lg5 class="sdtet-schedule-main-stage">{{events[0].english_event}}
-            </v-flex>
-            <v-flex v-else xs5 sm5 md5 lg5 class="sdtet-schedule-main-stage"></v-flex>
-            <v-flex xs2 sm2 md2 lg2 class="sdtet-schedule-date pa-2">{{start_time}} </v-flex>
-            <v-flex v-if="events[1]" xs5 sm5 md5 lg5 class="sdtet-schedule-cultural-village">
-              {{events[1].english_event}}
-            </v-flex>
-            <v-flex v-else xs5 sm5 md5 lg5 class="sdtet-schedule-cultural-village"></v-flex>
-          </template>
+            <template v-for="(events, start_time) in saturday">
+              <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-main-stage">
+                {{events[0] ? events[0].english_event: ""}}
+              </v-flex>
+              <v-flex xs2 sm2 md2 lg2 class="sdtet-schedule-date pa-2">{{start_time}} </v-flex>
+              <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-cultural-village">
+                {{events[1] ? events[1].english_event : ""}}
+              </v-flex>
+            </template>
 
           <!-- Sunday -->
           <div class="sdtet-schedule-spacer"></div>
@@ -64,16 +62,16 @@
           <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-title sdtet-text-align-left">Cultural Village</v-flex>
           <div class="sdtet-schedule-divider"></div>
 
-          <template v-for="(events, start_time) in sunday">
-            <v-flex v-if="events[0]" xs5 sm5 md5 lg5 class="sdtet-schedule-main-stage">{{events[0].english_event}}
-            </v-flex>
-            <v-flex v-else xs5 sm5 md5 lg5 class="sdtet-schedule-main-stage"></v-flex>
-            <v-flex xs2 sm2 md2 lg2 class="sdtet-schedule-date pa-2">{{start_time}} <div v-if="start_time == '9:00 PM'">Carnival Closes</div> <div v-if="start_time == '6:00 PM'">Festival Closes</div></v-flex>
-            <v-flex v-if="events[1]" xs5 sm5 md5 lg5 class="sdtet-schedule-cultural-village">
-              {{events[1].english_event}}
-            </v-flex>
-            <v-flex v-else xs5 sm5 md5 lg5 class="sdtet-schedule-cultural-village"></v-flex>
-          </template>
+            <template v-for="(events, start_time) in sunday">
+              <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-main-stage">
+                {{events[0] ? events[0].english_event: ""}}
+              </v-flex>
+              <v-flex xs2 sm2 md2 lg2 class="sdtet-schedule-date pa-2">{{start_time}} <div v-if="start_time == '9:00 PM'">Carnival Closes</div> <div v-if="start_time == '6:00 PM'">Festival Closes</div></v-flex>
+              <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-cultural-village">
+                {{events[1] ? events[1].english_event : ""}}
+              </v-flex>
+            </template>
+
           <!-- <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-title sdtet-text-align-right "></v-flex>
           <v-flex xs2 sm2 md2 lg2 class="sdtet-schedule-date pa-2">TBA</v-flex>
           <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-title sdtet-text-align-left "></v-flex> -->
@@ -100,7 +98,7 @@
 		created() {
 			axios.get("https://cors-anywhere.herokuapp.com/https://admin.sdtet.com/php_file/get_festival_schedule.php")
       .then(response => {
-					// JSON responses are automatically parsed.
+					// Parse JSON start times into moment objects
 					var moment = require("moment");
 					for (var day in response.data) {
 						for (var item in response.data[day]) {
@@ -110,11 +108,10 @@
 					}
 					// console.log("response", response.data);
 
-					for (var day = 0; day < 3; day++) {
+          // Loop through each day and group Main Stage and Cultural Village events by their starting times
+					for (var eventDay = 0; eventDay < 3; eventDay++) {
 						// Get the day's events
-						var eventList = response.data[Object.keys(response.data)[day]];
-						// Get all starting times for the day
-						var start_times = [...new Set(Object.keys(eventList).map(item => eventList[item].start_time))];
+						var eventList = response.data[Object.keys(response.data)[eventDay]];
 						// Group main stage and cultural village events by start times
 						var groupedEvents = {};
 						for (var eventKey in eventList) {
@@ -122,22 +119,20 @@
 							if (!groupedEvents[event.start_time]) {
 								groupedEvents[event.start_time] = [];
 							}
-							// Store main stage event at index 0, cultural village event at index 1
+							// For each start time, the main stage event will be stored at
+              // index 0 and the cultural village event at index 1
 							Vue.set(groupedEvents[event.start_time], event.stage, event);
-							// groupedEvents[event.start_time][event.stage] = event;
 						}
 
-						if (day === 0) {
+						// Store the grouped events to their assigned day
+						if (eventDay === 0) {
 							this.friday = Object.assign({}, this.friday, groupedEvents);
-							// console.log("Friday", this.friday);
 						}
-						else if (day === 1) {
+						else if (eventDay === 1) {
 							this.saturday = Object.assign({}, this.saturday, groupedEvents);
-							// console.log("Saturday", this.saturday);
 						}
 						else {
 							this.sunday = Object.assign({}, this.sunday, groupedEvents);
-							// console.log("Sunday", this.sunday);
 						}
 					}
 				})
