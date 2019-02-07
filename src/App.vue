@@ -27,7 +27,7 @@
   import Vendors from './components/vendors/vendors'
   import Volunteers from './components/volunteers/volunteers'
   import Directions from './components/directions/directions'
-  import Contact from './components/contact/contact'
+  // import Contact from './components/contact/contact'
   import About from './components/about/about'
 
   export default {
@@ -42,7 +42,7 @@
       Vendors,
       Volunteers,
       Directions,
-      Contact,
+      // Contact,
       About
     },
     data () {

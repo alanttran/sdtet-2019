@@ -6,15 +6,15 @@
     <v-layout column align-center justify-center class="sdtet-container pa-4" >
       <!-- <h1>San Diego Tết Festival 2018<br/>Spring Blossoms - Mira Mesa<br/>February 16 - 18, 2018</h1> -->
       <img class="sdtet-center-logo" src="../../assets/pig-logo.svg" alt="">
-      <span class="" style="font-family: 'Verdana'"><br/>MIRA MESA COMMUNITY PARK - FREE ADMISSION</span>
+      <span style="font-family: 'Verdana', sans-serif; text-align: center;"><br/>MIRA MESA COMMUNITY PARK - FREE ADMISSION</span>
       <!-- <v-btn href="#entertainment" large round color="teal" dark v-smooth-scroll><v-icon left style="width:20px;">movie creation</v-icon>Join our entertainment!</v-btn> -->
       <!-- <v-btn href="#sdtet-vendors-section" large round color="teal" dark v-smooth-scroll><v-icon left style="width:20px;">store</v-icon>Become a vendor!</v-btn>
       <v-btn href="#sdtet-sponsors-section" large round color="teal" dark v-smooth-scroll><v-icon left style="width:20px;">business center</v-icon>Sponsor us!</v-btn> -->
       <!-- <v-btn href="#sdtet-vendors-section" target="_blank" large round color="teal" dark v-smooth-scroll >Vendor Applications 2019 Open!</v-btn> -->
       <v-flex class="sdtet-container" >
         <div class="sdtet-date-container">
-          <p><b>FEBRUARY</b></p>
-          <table>
+          <p class="sdtet-text-align-center"><b>FEBRUARY</b></p>
+          <table class="sdtet-element-align-center">
             <tr>
               <td>8<sup>th</sup></td>
               <td>|</td>
@@ -40,8 +40,7 @@
               <td style="text-align: right">9:00 pm*</td>
             </tr>
             <tr>
-              <td colspan="2"></td>
-              <td colspan="4"><small>* <b>Tết Festival</b> ends at 6pm, <b>Carnival</b> ends at 9pm</small></td>
+              <td colspan="6"><small>* <b>Tết Festival</b> ends at 6pm, <b>Carnival</b> ends at 9pm</small></td>
             </tr>
           </table>
         </div>
@@ -92,9 +91,14 @@
     margin-top: 40px;
   }
   .sdtet-date-container{
-    width: 520px;
+    width: 100%;
     padding-top:30px;
     font-size: 16px;
+  }
+  @media screen and (max-width: 800px) {
+    .sdtet-date-container{
+      font-size: 1em;
+    }
   }
   td{
     padding-right: 7px;
