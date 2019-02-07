@@ -88,7 +88,6 @@
     max-height: 180px;
     width: 100%;
     max-width: 375px;
-    margin-top: 40px;
   }
   .sdtet-date-container{
     width: 100%;

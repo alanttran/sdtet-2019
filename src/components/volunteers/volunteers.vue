@@ -5,7 +5,7 @@
       <v-layout row wrap>
         <v-flex xs12 md6 order-md2>
           <h1 id="volunteers">Volunteers</h1>
-          <p>
+          <p v-if="volunteerData.signups_open">
             <strong>We are currently looking for volunteers!</strong>
           </p>
           <div v-for="text in volunteerData.text" :key="text.id">

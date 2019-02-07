@@ -4,6 +4,6 @@
 		"We need volunteers to help us run the festival!"
 	],
 	"email": "volunteer@sdtet.com",
-	"signups_open": true,
+	"signups_open": false,
 	"signup_form_url": "https://docs.google.com/forms/d/1bxjmW1YjVQ9w75CITudI0XXj-m861T-kfneH2z_F9_0"
 }

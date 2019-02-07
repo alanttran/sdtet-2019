@@ -25,7 +25,7 @@ position: relative;
     font-weight: 600;
     text-shadow: 0 0 2px black;
   }
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 1279px) {
     display: none;
   }
 }
@@ -49,7 +49,7 @@ position: relative;
     text-shadow: 0 0 2px black;
   }
 
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 1279px) {
     display: none;
   }
 }
@@ -72,7 +72,7 @@ position: relative;
     font-weight: 600;
     text-shadow: 0 0 2px black;
   }
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 1279px) {
     display: none;
   }
 }
@@ -95,7 +95,7 @@ position: relative;
     font-weight: 600;
     text-shadow: 0 0 2px black;
   }
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 1279px) {
     display: none;
   }
 }
@@ -104,7 +104,7 @@ position: relative;
   background-image: url('../../assets/stepupdance.png');
   position: absolute;
   z-index: 0;
-  top: 12%;
+  top: 9%;
   left: 100px;
   width: 400px;
   height: 251px;
@@ -118,7 +118,7 @@ position: relative;
     font-weight: 600;
     text-shadow: 0 0 2px black;
   }
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 1279px) {
     display: none;
   }
 }
@@ -127,7 +127,7 @@ position: relative;
   background-image: url('../../assets/lion-dancing.png');
   position: absolute;
   z-index: 0;
-  top: 155px;
+  top: 120px;
   right: 100px;
   width: 400px;
   height: 276px;
@@ -141,7 +141,7 @@ position: relative;
     font-weight: 600;
     text-shadow: 0 0 2px black;
   }
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 1279px) {
     display: none;
   }
 }
@@ -179,7 +179,7 @@ position: relative;
     align-items: center;
     text-shadow: $sdtet-schedule-text-shadow;
 
-    @media screen and (max-width: 960px) {
+    @media screen and (max-width: 1279px) {
         position: static;
     }
 }
@@ -207,26 +207,23 @@ position: relative;
     font-size: 2rem;
     font-family: 'Nunito', sans-serif;
     font-weight: 400;
+    align-self: flex-end;
 }
 
 @media screen and (max-width: 500px) {
   .sdtet-schedule-title {
     font-size: 1.25em;
   }
-
-  .sdtet-schedule-date {
-    font-size: 0.75em;
-  }
 }
 
 
 @media screen and (max-width: 400px) {
   .sdtet-schedule-title {
-    font-size: 1.15em;
+    font-size: 1.3em;
   }
 
   .sdtet-schedule-date {
-    font-size: 0.65em;
+    font-size: 1em;
   }
 }
 

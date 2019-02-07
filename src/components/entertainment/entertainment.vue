@@ -86,7 +86,7 @@
                 <h3 class="headline mb-3">Pet Costume Contest</h3>
                 <div>We heard you loved the dog costume contest last year and we are excited to bring this back for ALL pets!</div><br/>
                   
-                <p><b>First 30 to sign up on Sunday at Cultural Village 3:00PM will be in the contest at 4:00PM.</b></p>
+                <p><b>First 30 to sign up on Sunday at Cultural Village 2:30PM will be in the contest at 4:00PM.</b></p>
                   
               </div>
             </v-card-title>
