@@ -79,7 +79,7 @@
 
         <v-flex sm12 md4 lg3>
           <v-card class="sdtet-entertainment-card">
-            <v-card-media src="http://purrfectcatbreeds.com/wp-content/uploads/2016/06/cute-cat-halloween-costumes.jpg" height="200px">
+            <v-card-media src="https://purrfectcatbreeds.com/wp-content/uploads/2016/06/cute-cat-halloween-costumes.jpg" height="200px">
             </v-card-media>
             <v-card-title primary-title>
               <div>

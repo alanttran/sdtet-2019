@@ -6,5 +6,18 @@
 		"Don't hesitate to contact us if you have any questions. We'll make sure that the upcoming Lunar New Year will be an amazing experience for you.",
 		"VAYA"
 	],
-	"email": "vendor@sdtet.com"
+	"email": "vendor@sdtet.com",
+	"foodApplicationURL": "https://forms.gle/xqTAGXYbmvyaZHmf7",
+	"vendorApplicationURL": "https://forms.gle/roLsyAuY2LiVcgoa9",
+	"isAppOpen": true,
+	"foodAvail": true,
+	"gameAvail": true,
+	"infoAvail": true,
+	"nonProfitAvail": true,
+	"foodPrice": 850,
+	"foodExclusivePrice": 150,
+	"gamePrice": 500,
+	"infoPrice": 400,	
+	"nonProfitPrice": 250,
+	"deposit": 200
 }

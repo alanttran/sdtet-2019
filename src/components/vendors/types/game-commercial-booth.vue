@@ -10,8 +10,8 @@
 			<v-card-title class="headline">Game or Commercial Booth</v-card-title>
 			<v-card-text>
 				<v-alert outline color="info" icon="info" :value="true">
-					<!-- <b>Apply:</b>&nbsp; <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdL6Xf-TZOjUR3yzvCneQSUqzTqxwSHkfA1OhgHR7XgK7IqBw/viewform">Vendor Form</a> -->
-					Vendor spots are all filled. Please contact <b>vendor@sdtet.com</b> if you have any questions
+					<span v-if="vendorData.gameAvail"><b>Apply:</b>&nbsp; <a target="_blank" v-bind:href="vendorData.vendorApplicationURL">Vendor Form</a></span>
+					<span v-if="!vendorData.gameAvail">Vendor spots are all filled. Please contact <b>vendor@sdtet.com</b> if you have any questions</span>
 				</v-alert>
 				<v-layout>
 					<v-flex sm6 md6 lg6>
@@ -36,18 +36,18 @@
 											</tr>
 											<tr>
 												<td style="width: 200px;">Booth Price</td>
-												<td>$450.00</td>
+												<td style="text-align: right">${{vendorData.gamePrice}}.00</td>
 											</tr>
 											<tr>
 												<td>Refundable deposit</td>
-												<td>$200.00</td>
+												<td style="text-align: right">${{vendorData.deposit}}.00</td>
 											</tr>
 											<tr>
 												<td>
 													<b>Total</b>
 												</td>
-												<td>
-													<b>$650.00</b>
+												<td style="text-align: right">
+													<b>${{vendorData.gamePrice + vendorData.deposit}}.00</b>
 												</td>
 											</tr>
 										</table>
@@ -63,8 +63,8 @@
 						<h4 class="header ">or... Check Payment</h4>
 						<p>Please write two checks payable to VAYA. Make sure to include your business name so we can match your payment to your application.</p>
 						<ul>
-							<li>Check 1: $450.00 for booth fees</li>
-							<li>Check 2: $200.00 for the refundable clean-up fee</li>
+							<li>Check 1: ${{vendorData.gamePrice}}.00 for booth fees</li>
+							<li>Check 2: ${{vendorData.deposit}}.00 for the refundable clean-up fee</li>
 						</ul>
 						<p>Then mail them to...</p>
 						<p>
@@ -84,11 +84,13 @@
 </template>
 
 <script type="text/javascript">
+	import data from '../vendors.json'
 
 	export default {
 		data () {
 			return {
-				dialog: false
+				dialog: false,
+				vendorData: data
 			}
 		}
 	}

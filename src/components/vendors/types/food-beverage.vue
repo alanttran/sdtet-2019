@@ -11,37 +11,34 @@
    <v-card-title class="headline">Food and/or Beverage</v-card-title>
    <v-card-text>
     <v-alert outline color="info" icon="info" :value="true">
-      <!-- <b>Apply:</b>&nbsp; <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeFBN14OgWFnXxMsXV2sst0vbBAkaqkCvZqo7OJx2ru0y8G-g/viewform">Food Vendor Form</a> -->
-      Vendor applications are now closed. Please direct any questions to vendor@sdtet.com. 
+      <span v-if="vendorData.foodAvail"><b>Apply:</b>&nbsp; <a target="_blank" v-bind:href="vendorData.foodApplicationURL">Food Vendor Form</a></span>
+          <span v-if="!vendorData.foodAvail">Vendor spots are all filled. Please contact <b>vendor@sdtet.com</b> if you have any questions</span>
     </v-alert>
-    
-    <v-layout wrap>
-     <v-flex sm12 md12 lg12>
-      <h4 class="header ">Exclusivity Fee</h4>
-      <p>To reserve a food item’s exclusivity sold by you, there will be an additional $150 charge per item. These items cannot be common food such as B.B.Q., rice, eggrolls, spring rolls, etc. Exclusivity will be first-come, first-serve basis at Vendor Chairs’ discretion. For further questions, contact a Vendor Chair. If we find that your exclusivity claim is invalid or already have been claimed, we will issue you a refund.</p>
-    </v-flex>
-    <v-flex sm7 md7 lg7>
+    <h4 class="header ">Exclusivity Fee</h4>
+      <p>To reserve a food item’s exclusivity sold by you, there will be an additional ${{vendorData.foodExclusivePrice}} charge per item. These items cannot be common food such as B.B.Q., rice, eggrolls, spring rolls, etc. Exclusivity will be first-come, first-serve basis at Vendor Chairs’ discretion. For further questions, contact a Vendor Chair. If we find that your exclusivity claim is invalid or already have been claimed, we will issue you a refund.</p>
+    <v-layout>
+    <v-flex sm6 md6 lg6>
       <h4 class="header ">Electronic Payment</h4>
       <table>
         <tr>
           <td style="width: 280px;">Price of Booth</td>
-          <td>$800.00</td>
+          <td style="text-align: right">${{vendorData.foodPrice}}.00</td>
         </tr>
         <tr>
           <td>Refundable cleanup fee</td>
-          <td>$200.00</td>
+          <td style="text-align: right">${{vendorData.deposit}}.00</td>
         </tr>
         <tr>
           <td>
             <b>Total</b>
           </td>
-          <td>
-            <b>$1000.00</b>
+          <td style="text-align: right">
+            <b>${{vendorData.foodPrice + vendorData.deposit}}.00</b>
           </td>
         </tr>
         <tr>
           <td>Exclusive claim fee (optional)</td>
-          <td>$150.00/item</td>
+          <td style="text-align: right">${{vendorData.foodExclusivePrice}}.00</td> 
         </tr>
       </table>
       <br>
@@ -57,10 +54,10 @@
           <tr>
             <td>
               <select id="exclusive-select" class="sdtet-form-control" name="os0">
-                <option value="Food Booth">Food Booth $1,000.00 USD</option>
-                <option value="Food Booth w/ one exclusive item">Food Booth w/ one exclusive item $1,150.00 USD</option>
-                <option value="Food Booth w/ two exclusive items">Food Booth w/ two exclusive items $1,300.00 USD</option>
-                <option value="Food Booth w/ three exclusive items">Food Booth w/ three exclusive items $1,450.00 USD</option>
+                <option value="Food Booth">Food Booth ${{vendorData.foodPrice + vendorData.deposit}}</option>
+                <option value="Food Booth w/ one exclusive item">Food Booth w/ one exclusive item ${{vendorData.foodPrice + vendorData.deposit + vendorData.foodExclusivePrice}}</option>
+                <option value="Food Booth w/ two exclusive items">Food Booth w/ two exclusives ${{vendorData.foodPrice + vendorData.deposit + vendorData.foodExclusivePrice * 2}}</option>
+                <option value="Food Booth w/ three exclusive items">Food Booth w/ three exclusives ${{vendorData.foodPrice + vendorData.deposit + vendorData.foodExclusivePrice * 3}}</option>
               </select>
             </td>
           </tr>
@@ -80,12 +77,12 @@
           <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
         </form>
       </v-flex>
-      <v-flex sm5 md5 lg5 style="padding-left: 25px;">
+      <v-flex sm6 md6 lg6 style="padding-left: 25px;">
         <h4 class="header ">or... Check Payment</h4>
         <p>Please write two or three checks payable to VAYA. Make sure to include your business name so we can match your payment to your application.</p>
         <ul>
-          <li>Check 1: $800.00 for booth fees</li>
-          <li>Check 2: $200.00 for the refundable deposit</li>
+          <li>Check 1: ${{vendorData.foodPrice}}.00 for booth fees</li>
+          <li>Check 2: ${{vendorData.deposit}}.00 for the refundable deposit</li>
           <li>Check 3 (optional): $150.00/$300.00/$450.00 for exclusive items</li>
         </ul>
         <p>Then mail them to...</p>
@@ -105,11 +102,13 @@
 </template>
 
 <script type="text/javascript">
+  import data from '../vendors.json'
 
   export default {
     data () {
       return {
-        dialog: false
+        dialog: false,
+        vendorData: data
       }
     }
   }

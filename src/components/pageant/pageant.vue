@@ -5,10 +5,10 @@
     <h1 class="sdtet-text-align-center">{{pageantData.title}}</h1>
     <div class="sdtet-text-align-center">
       <div v-if="!pageantData.signups_open">
-        <p><span class="navy"><b>Join us on Saturday Feb 9th at 5:30PM on the main stage to cheer on our girls!</b></span></p>
+        <!-- <p><span class="navy"><b>Join us on Saturday Feb 9th at 5:30PM on the main stage to cheer on our girls!</b></span></p> -->
       </div>
       <div v-else>
-        <v-btn href="https://goo.gl/forms/Q67Pl4yvXMdUSUJv1" target="_blank" large round color="teal" dark v-smooth-scroll >Sign up for Pageant 2019!</v-btn>
+        <v-btn href="https://forms.gle/dB2hLkfNsWqXo4Y58" target="_blank" large round color="teal" dark v-smooth-scroll >Sign up for Pageant 2020!</v-btn>
       </div>
       
     </div>

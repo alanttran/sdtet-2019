@@ -22,15 +22,28 @@
             class="headline grey lighten-2"
             primary-title
           >
-           Thank you for coming to our festival! 
+           Next festival is on January 24-26, 2020! <br>For the year of the Rat!
           </v-card-title>
 
           <v-card-text>
-            <h2>Our festival next year is on <u>January 24-26, 2020</u>! For the year of the Rat!</h2>
+            <h2></h2><br/>
+
+            <p style="text-align: center;"><span style="font-size: 20px;">Join us at our Autumn Gala Fundraiser! November 9th!</span> <v-btn normal round color="teal" target="_blank" href="https://business.facebook.com/events/1229801887192852/"><span style="color: white">Thu Quyến Rũ — Autumn Gala Fundraiser</span></v-btn></p><br/>
+
+            <p>Sponsorship Packet:  <v-btn small outline color="primary" target="_blank" href="https://sdtet.s3-us-west-1.amazonaws.com/documents/VAYA_Sponsorship_2020_v3hi-res.pdf">Download 2020 Sponsorship Packet</v-btn></p>
+
+            <p>Pageant applications open: <v-btn small outline color="pink" target="_blank" href="https://forms.gle/dB2hLkfNsWqXo4Y58"><span style="">Pageant 2020 Application</span></v-btn></p>
+
+            <p>Food vendor applications open: <v-btn small outline color="green" target="_blank" href="https://forms.gle/xqTAGXYbmvyaZHmf7"><span style="">Food Vendor 2020 Application</span></v-btn></p>
+
+            <p>Vendor applications open: <v-btn small outline color="deep-orange" target="_blank" href="https://forms.gle/roLsyAuY2LiVcgoa9"><span style="">Vendor 2020 Application</span></v-btn></p>
+
+
+            
             <p>If you have any questions or feedback, send them to <b>info@sdtet.com!</b></p>
             <div style="text-align: center; padding-top: 20px;">
               
-            <img height="200" src="./assets/Rat.png" alt="">
+            <!-- <img height="200" src="./assets/Rat.png" alt=""> -->
             </div>
             
             <!-- <v-layout row wrap justify-space-around class="sdtet-text-align-center">
@@ -65,12 +78,20 @@
 
           <v-card-actions>
             <v-spacer></v-spacer>
+            
+            <v-btn
+              color="teal"
+              flat
+              target="_blank" href="https://www.paypal.com/fundraiser/charity/1440775"
+            >
+              Donate to sdtet
+            </v-btn>
             <v-btn
               color="primary"
               flat
               @click="dialog = false"
             >
-              Go to 2019 Site
+              Go to last year's Site
             </v-btn>
           </v-card-actions>
         </v-card>
