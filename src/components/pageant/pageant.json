@@ -7,5 +7,6 @@
 	"pageant_year": "2019",
 	"slogan": "Congratulations everyone!",
 	"voting": false,
-	"signups_open": true
+	"signups_open": true,
+	"signups_close_date": "2019-10-29"
 }

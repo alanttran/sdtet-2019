@@ -74,7 +74,7 @@ export default {
     var moment = require('moment')
     var todaysdate = moment()
 
-    var signUpDate = moment('2019-10-22')
+    var signUpDate = moment(this.pageantData.signups_close_date);
 
     this.signUpTimeLeft = signUpDate.diff(todaysdate, 'days') 
   }
