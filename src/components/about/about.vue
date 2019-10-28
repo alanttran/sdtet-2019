@@ -39,6 +39,6 @@
       <li>Opening Ceremony</li>
       <li>Red Evelopes for Children</li>
     </ul><br/>
-    <p>Come out and celebrated the Vietnamese New Year weekend with us at the San Diego Tet Festival at Mira Mesa Community Park!</p>
+    <p>Come out and celebrated the Vietnamese New Year weekend with us at the San Diego Tết Festival at Mira Mesa Community Park!</p>
   </div>
 </template>

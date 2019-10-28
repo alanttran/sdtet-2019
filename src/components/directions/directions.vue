@@ -41,7 +41,7 @@
               <a href="https://www.facebook.com/sandiegotetfestival/" target="_blank">
                 <img height="30px" src="../../assets/f.svg" alt="Facebook icon" />
               </a><br/><br/>
-              <p>&copy; 2019 San Diego Tet Festival</p>
+              <p>&copy; 2019 San Diego Tết Festival</p>
             </div>
 
           </div>

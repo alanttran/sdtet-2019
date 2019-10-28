@@ -16,7 +16,7 @@
     <div class="sdtet-navigation-menu">
       <v-menu offset-y>
       <v-btn icon large slot="activator">
-        <v-icon large color="pink lighten-3">menu</v-icon>
+        <v-icon large color="amber darken-1">menu</v-icon>
       </v-btn>
         <v-list>
           <v-list-tile>

@@ -17,7 +17,7 @@
         <v-flex xs12 md6>
           <div class="sdtet-volunteers-forms-container sdtet-text-align-center">
             <div v-if="!volunteerData.signups_open">
-              <p><span class="navy"><b>Signups are closed!</b></span></p>
+              <p><span class="navy"><b>Signups TBD!</b></span></p>
               <div class="sdtet-h1-spacer">
                 <h1>&nbsp;</h1>
               </div>

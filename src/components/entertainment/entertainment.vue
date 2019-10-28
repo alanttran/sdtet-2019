@@ -15,7 +15,7 @@
               <h3 class="headline mb-3">Step Up Dance Competition</h3>
 							<div>Do you love dancing? If you have an up and coming team or a new choreography to try, why not bring yourselves to our stage and wow us for the new year!</div>
 
-              <p v-if="stepUpDanceTimeLeft < 0"><br/>Check out the competition at <b>Main Stage - Friday Feb 8 at 8:00pm!</b></p>
+              <p v-if="stepUpDanceTimeLeft < 0"><br/><b>Signups TBD</b></p>
               
               <div v-if="stepUpDanceTimeLeft >= 0"><b>Deadline: {{stepUpDanceEnd}}</b></div>              
             </v-card-title>
@@ -46,7 +46,7 @@
               </div>
             </v-card-title>
             <v-card-actions>
-              <v-btn v-if="kidsSpotlightTimeLeft >= 0" href="https://s3-us-west-1.amazonaws.com/sdtet/documents/Kids-Spotlight-Application-2019.docx" target="_blank" block outline round color="teal" dark>Download Form <span v-if="kidsSpotlightTimeLeft < 10">&nbsp;- {{kidsSpotlightTimeLeft}} days left!</span></v-btn>
+              <v-btn v-if="kidsSpotlightTimeLeft >= 0" href="https://docs.google.com/forms/d/e/1FAIpQLScNCuKiWtoyWI5F_sQsa-Zz9AFCN4Je3QI_ZzLkj3F6kIdZUw/viewform" target="_blank" block outline round color="teal" dark>Sign Up <span v-if="kidsSpotlightTimeLeft < 10">&nbsp;- {{kidsSpotlightTimeLeft}} days left!</span></v-btn>
             </v-card-actions>
           </v-card>
         </v-flex>
@@ -72,12 +72,12 @@
               </div>
             </v-card-title>
             <v-card-actions>
-              <v-btn v-if="goldenVoiceTimeLeft >= 0" href="https://goo.gl/forms/BcBvEodlT3BjF2iI2" target="_blank" block outline round color="teal" dark>Sign up! <span v-if="goldenVoiceTimeLeft < 10">&nbsp;- {{goldenVoiceTimeLeft}} days left!</span></v-btn>
+              <v-btn v-if="goldenVoiceTimeLeft >= 0" href="https://docs.google.com/forms/d/139EXOZnnJULnUa8Elhepu-c7cytSLSgt7dpi7uOnwCg/edit" target="_blank" block outline round color="teal" dark>Sign up <span v-if="goldenVoiceTimeLeft < 10">&nbsp;- {{goldenVoiceTimeLeft}} days left!</span></v-btn>
             </v-card-actions>
           </v-card>
         </v-flex>
 
-        <v-flex sm12 md4 lg3>
+        <!-- <v-flex sm12 md4 lg3>
           <v-card class="sdtet-entertainment-card">
             <v-card-media src="https://purrfectcatbreeds.com/wp-content/uploads/2016/06/cute-cat-halloween-costumes.jpg" height="200px">
             </v-card-media>
@@ -94,7 +94,7 @@
               
             </v-card-actions>
           </v-card>
-        </v-flex>
+        </v-flex> -->
 
       </v-layout>
 
@@ -120,8 +120,8 @@
       var todaysdate = moment()
 
       var stepUpDanceDate = moment('2019-02-01')
-      var kidsSpotlightDate = moment('2019-01-19')
-      var goldenVoiceDate = moment('2019-02-03')
+      var kidsSpotlightDate = moment('2020-01-05')
+      var goldenVoiceDate = moment('2020-01-10')
 
       this.stepUpDanceEnd = stepUpDanceDate.format('LL')
       this.kidsSpotlightEnd = kidsSpotlightDate.format('LL')
