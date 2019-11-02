@@ -61,7 +61,7 @@ export default {
     }
   },
   created () {
-    axios.get('https://cors-anywhere.herokuapp.com/https://admin.sdtet.com/php_file/get_pageant_contestants.php')
+    axios.get('https://admin.sdtet.com/php_file/get_pageant_contestants.php')
     .then(response => {
       // JSON responses are automatically parsed.
       this.contestants = response.data

@@ -1,16 +1,59 @@
-######################
-## Handling Options for the CORS
-     RewriteCond %{REQUEST_METHOD} OPTIONS
-     RewriteRule ^(.*)$ $1 [L,R=204]
+# BROWSER CACHING USING EXPIRES HEADERS
+<IfModule mod_expires.c>
+    ExpiresActive On
+  
+    # Images
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+  
+    # Video
+    ExpiresByType video/mp4 "access plus 1 year"
+    ExpiresByType video/mpeg "access plus 1 year"
 
-###################
-## Add custom headers
+    # CSS, JavaScript
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType text/javascript "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
 
-    Header set X-Content-Type-Options "nosniff"
-    Header set X-XSS-Protection "1; mode=block"
-       # Always set these headers for CORS.
-    Header always set Access-Control-Max-Age 1728000
-    Header always set Access-Control-Allow-Origin: "https://admin.sdtet.com/"
-    Header always set Access-Control-Allow-Methods: "GET,POST,OPTIONS,DELETE,PUT"
-    Header always set Access-Control-Allow-Headers: "DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,C$
-    Header always set Access-Control-Allow-Credentials true
+    # Others
+    ExpiresByType application/pdf "access plus 1 month"
+    ExpiresByType application/x-shockwave-flash "access plus 1 month"
+</IfModule>
+
+# BROWSER CACHING USING CACHE-CONTROL HEADERS
+<ifModule mod_headers.c> 
+    # One year for image and video files
+    <filesMatch ".(flv|gif|ico|jpg|jpeg|mp4|mpeg|png|svg|swf|webp)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </filesMatch>
+
+    # One month for JavaScript and PDF files
+    <filesMatch ".(js|pdf)$">
+        Header set Cache-Control "max-age=2592000, public"
+    </filesMatch>
+
+    # One week for CSS files
+    <filesMatch ".(css)$">
+        Header set Cache-Control "max-age=604800, public"
+    </filesMatch>
+</ifModule>
+
+Header set Cache-Control "max-age=3000, public"
+
+Header set X-Frame-Options: SAMEORIGIN
+
+Header set X-Content-Type-Options: nosniff
+
+Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+Header set Content-Security-Policy "script-src 'unsafe-inline' http://www.sdtet.com https://www.googletagmanager.com/ https://connect.facebook.net/"
+
+Header set Referrer-Policy: strict-origin
+
+Header set Feature-Policy "microphone 'none'"
+
+

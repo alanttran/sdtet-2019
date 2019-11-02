@@ -52,7 +52,7 @@
       }
     },
     created () {
-      axios.get('https://cors-anywhere.herokuapp.com/http://admin.sdtet.com/php_file/get_sponsors.php')
+      axios.get('https://admin.sdtet.com/php_file/get_sponsors.php')
         .then(response => {
           // JSON responses are automatically parsed.
           this.sponsors = response.data

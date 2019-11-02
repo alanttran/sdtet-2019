@@ -97,7 +97,7 @@
 			};
 		},
 		created() {
-			axios.get("https://cors-anywhere.herokuapp.com/https://admin.sdtet.com/php_file/get_festival_schedule.php")
+			axios.get("https://admin.sdtet.com/php_file/get_festival_schedule.php")
       .then(response => {
 					// Parse JSON start times into moment objects
 					var moment = require("moment");
