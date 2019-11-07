@@ -20,7 +20,7 @@
               <div v-if="stepUpDanceTimeLeft >= 0"><b>Deadline: {{stepUpDanceEnd}}</b></div>              
             </v-card-title>
             <v-card-actions>
-              <v-btn v-if="stepUpDanceTimeLeft >= 0" href="https://goo.gl/forms/m72AzVtjPkrpAPUw2" target="_blank" block outline round color="teal" dark>Sign up! <span v-if="stepUpDanceTimeLeft < 10">&nbsp;- {{stepUpDanceTimeLeft}} days left!</span> </v-btn>
+              <v-btn v-if="stepUpDanceTimeLeft >= 0" href="https://docs.google.com/forms/d/e/1FAIpQLSfja6BlaKsTy52U2vW8KNGFj1smaMorOm9rmtEA1UgyzccP1g/viewform" target="_blank" block outline round color="teal" dark>Sign up! <span v-if="stepUpDanceTimeLeft < 10">&nbsp;- {{stepUpDanceTimeLeft}} days left!</span> </v-btn>
               
             </v-card-actions>
           </v-card>
@@ -119,7 +119,7 @@
       var moment = require('moment')
       var todaysdate = moment()
 
-      var stepUpDanceDate = moment('2019-02-01')
+      var stepUpDanceDate = moment('2020-01-10')
       var kidsSpotlightDate = moment('2020-01-05')
       var goldenVoiceDate = moment('2020-01-10')
 
