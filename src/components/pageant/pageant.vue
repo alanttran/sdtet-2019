@@ -25,7 +25,11 @@
     <h1 class="sdtet-text-align-center">Pageant {{pageantData.pageant_year}}</h1>
     <h2 class="sdtet-text-align-center">{{pageantData.slogan}}</h2>
     <!-- <div class="sdtet-text-align-center"><img style="height: 600px;" src="../../assets/pageant-preview-2019.png" alt=""></div> -->
-    <v-container mb-4>
+    <div style="max-width: 750px; margin: 0 auto">
+      <iframe width="100%" height="415" style="max-width:750px" src="https://www.youtube.com/embed/e8w5qf2yLOU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    
+    <!-- <v-container mb-4>
       <v-layout id="contestants" row wrap>
         <v-flex v-for="contestant in contestants" :key="contestant.id" xs12 sm6 md4 lg3>
           <v-card height="670px" class="ma-1" style="display: flex; flex-direction: column">
@@ -45,7 +49,7 @@
           </v-card>
         </v-flex>
       </v-layout>
-    </v-container>
+    </v-container> -->
   </div>
 </template>
 

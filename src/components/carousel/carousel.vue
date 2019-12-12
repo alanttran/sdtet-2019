@@ -7,7 +7,7 @@
       <!-- <h1>San Diego Tết Festival 2018<br/>Spring Blossoms - Mira Mesa<br/>February 16 - 18, 2018</h1> -->
       <a href="https://www.vecteezy.com/free-vector/year-of-the-rat"><img style="width: 375px;" class="sdtet-center-logo" src="../../assets/year-of-the-rat-placeholder.svg" alt=""></a>
 
-      <p style="text-align: center; margin-top: 15px;"><span style="font-size: 20px;">Join us at our Autumn Gala Fundraiser! November 9th!</span> <v-btn normal round color="light-green lighten-2" target="_blank" href="https://business.facebook.com/events/1229801887192852/"><span>Thu Quyến Rũ — Autumn Gala Fundraiser</span></v-btn></p><br/>
+      <!-- <p style="text-align: center; margin-top: 15px;"><span style="font-size: 20px;">Join us at our Autumn Gala Fundraiser! November 9th!</span> <v-btn normal round color="light-green lighten-2" target="_blank" href="https://business.facebook.com/events/1229801887192852/"><span>Thu Quyến Rũ — Autumn Gala Fundraiser</span></v-btn></p> --><br/>
       
       <span style="font-family: 'Verdana', sans-serif; text-align: center;"><br/>MIRA MESA COMMUNITY PARK - FREE ADMISSION</span>
       <!-- <v-btn href="#entertainment" large round color="teal" dark v-smooth-scroll><v-icon left style="width:20px;">movie creation</v-icon>Join our entertainment!</v-btn> -->

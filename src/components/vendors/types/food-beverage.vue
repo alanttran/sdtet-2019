@@ -12,7 +12,7 @@
    <v-card-text>
     <v-alert outline color="info" icon="info" :value="true">
       <span v-if="vendorData.foodAvail"><b>Apply:</b>&nbsp; <a target="_blank" v-bind:href="vendorData.foodApplicationURL">Food Vendor Form</a></span>
-          <span v-if="!vendorData.foodAvail">Vendor spots are all filled. Please contact <b>vendor@sdtet.com</b> if you have any questions</span>
+      <span v-if="!vendorData.foodAvail">Vendor spots are all filled. Please contact <b>vendor@sdtet.com</b> if you have any questions</span>
     </v-alert>
     <h4 class="header ">Exclusivity Fee</h4>
       <p>To reserve a food item’s exclusivity sold by you, there will be an additional ${{vendorData.foodExclusivePrice}} charge per item. These items cannot be common food such as B.B.Q., rice, eggrolls, spring rolls, etc. Exclusivity will be first-come, first-serve basis at Vendor Chairs’ discretion. For further questions, contact a Vendor Chair. If we find that your exclusivity claim is invalid or already have been claimed, we will issue you a refund.</p>

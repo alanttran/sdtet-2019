@@ -12,12 +12,12 @@
 				</v-flex>
 				<v-flex xs12 md6 lg6 class="sdtet-text-align-center">
 					<div class="sdtet-h1-spacer"><h1>&nbsp;</h1></div>
-					<h2>Select your booth to <b>apply & pay</b></h2>
-					<p v-if="vendorData.isAppOpen">Vendor 2020 applications open!</p>
+					<h2>Select your booth to <b>apply or pay</b></h2>
+					<p v-if="vendorData.isAppOpen"></p>
 					<v-layout row wrap justify-space-around>
 						<v-flex xs6 sm6 lg6><GameCommercialBooth></GameCommercialBooth></v-flex>
 						<v-flex xs6 sm6 lg6><InfoArtBooth></InfoArtBooth></v-flex>
-						<v-flex xs6 sm6 lg6><FoodBeverageBooth></FoodBeverageBooth></v-flex>
+						<v-flex xs6 sm6 lg6 style="display: flex; justify-content: center; align-items: center"><!-- <FoodBeverageBooth></FoodBeverageBooth> --><div><b>Food vendors spots are sold out!</b><br/><br/> If you have any questions or would like to be on the waitlist, contact vendor@sdtet.com</div></v-flex>
 						<v-flex xs6 sm6 lg6><NonProfitGovBooth></NonProfitGovBooth></v-flex>                     
 					</v-layout>
 				</v-flex>

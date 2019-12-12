@@ -10,7 +10,7 @@
 	"foodApplicationURL": "https://forms.gle/xqTAGXYbmvyaZHmf7",
 	"vendorApplicationURL": "https://forms.gle/roLsyAuY2LiVcgoa9",
 	"isAppOpen": true,
-	"foodAvail": true,
+	"foodAvail": false,
 	"gameAvail": true,
 	"infoAvail": true,
 	"nonProfitAvail": true,

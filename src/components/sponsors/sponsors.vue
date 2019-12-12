@@ -29,7 +29,7 @@
           <h1 class="sdtet-h1-spacer">&nbsp;</h1>
           <h2>{{sponsorData.slogan}}</h2>
           <v-layout class="sdtet-sponsors-logos-container" row wrap justify-space-around>
-            <a v-for="sponsor in sponsors"  :key="sponsor.id" :href="sponsor.url" target="_blank">
+            <a v-for="sponsor in sponsors" :style="{order: sponsor.list_order}"  :key="sponsor.id" :href="sponsor.url" target="_blank">
               <img class="ma-3" :src="sponsor.logo_image_link">
             </a>
           </v-layout>
@@ -54,9 +54,13 @@
     created () {
       axios.get('https://admin.sdtet.com/php_file/get_sponsors.php')
         .then(response => {
-          // JSON responses are automatically parsed.
-          this.sponsors = response.data
-          //console.log('Sponsors: ', response.data)
+          // from db - only show active sponsors
+          for (var key in response.data) {
+            if(response.data[key].active === "1"){
+              this.sponsors.push(response.data[key]);
+            }
+          }
+          //console.log(this.sponsors)
         })
         .catch(e => {
           console.log(e)

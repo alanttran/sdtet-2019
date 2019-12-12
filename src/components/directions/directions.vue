@@ -40,8 +40,12 @@
               <br>
               <a href="https://www.facebook.com/sandiegotetfestival/" target="_blank">
                 <img height="30px" src="../../assets/f.svg" alt="Facebook icon" />
-              </a><br/><br/>
-              <p>&copy; 2019 San Diego Tết Festival</p>
+              </a>&nbsp;
+              <a href="https://www.instagram.com/sandiegotetfestival/" target="_blank">
+                <img height="30px" src="../../assets/instagram.svg" alt="Instagram icon" />
+              </a>
+              <br/><br/>
+              <p>&copy; 2020 San Diego Tết Festival</p>
             </div>
 
           </div>
