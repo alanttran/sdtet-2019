@@ -4,6 +4,7 @@
       <a href="#"><img class="sdtet-logo" src="../../assets/sdtet-logo.svg" alt="Logo"></a>
     </v-flex> -->
     <v-layout align-center justify-center class="sdtet-navigation__links">
+      <v-flex><a id="sdtet-nav-logo" href="#home" v-smooth-scroll><img style="width: 30px;" src="../../assets/mouse-logo.png" alt=""></a></v-flex>
       <v-flex><a href="#sdtet-schedule-section" v-smooth-scroll>Schedule</a></v-flex>
       <v-flex><a href="#sdtet-pageant-section" v-smooth-scroll>Pageant</a></v-flex>
       <v-flex><a href="#sdtet-vendors-section" v-smooth-scroll>Vendors</a></v-flex>

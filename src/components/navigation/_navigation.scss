@@ -4,8 +4,18 @@
 	height: 50px;
 	position: sticky;
 	top: 0px;
-	background: $sdtet-blue;
+	background: #ffd200;
 	z-index: 20;
+}
+
+#sdtet-nav-logo img{
+	transition: .5s ease;
+	&:hover{
+		-webkit-transform: rotateZ(-10deg);
+		-ms-transform: rotateZ(-10deg);
+		transform: rotateZ(-10deg);
+		transition: .5s ease;
+	}
 }
 
 .sdtet-navigation__links {
@@ -16,10 +26,16 @@
   text-transform: uppercase;
   font-weight: 600;
   a {
-    color: #FBAF3F !important;
+    color: black !important;
     font-family: 'Segoe UI', 'Roboto';
     margin-left: 5px;
     margin-right: 5px;
+
+    &:hover{
+    	text-decoration: underline;
+    }
+
+
   }
 }
 

@@ -2,14 +2,14 @@
   <!-- <v-carousel>
     <v-carousel-item v-for="(item,i) in items" v-bind:src="item.src" :key="i"></v-carousel-item>
   </v-carousel> -->
-  <div id="sdtet-schedule-section"  class="sdtet-jumbotron">
-    <v-layout column align-center justify-center class="sdtet-container pa-4" >
+  <div class="sdtet-jumbotron" id="home">
+    <v-layout column align-center justify-center class="sdtet-container" style="padding-bottom: 24px;" >
       <!-- <h1>San Diego Tết Festival 2018<br/>Spring Blossoms - Mira Mesa<br/>February 16 - 18, 2018</h1> -->
-      <a href="https://www.vecteezy.com/free-vector/year-of-the-rat"><img style="width: 375px;" class="sdtet-center-logo" src="../../assets/year-of-the-rat-placeholder.svg" alt=""></a>
+      <img style="width: 80%" src="../../assets/sdtet_web_header.png" alt="">
 
       <!-- <p style="text-align: center; margin-top: 15px;"><span style="font-size: 20px;">Join us at our Autumn Gala Fundraiser! November 9th!</span> <v-btn normal round color="light-green lighten-2" target="_blank" href="https://business.facebook.com/events/1229801887192852/"><span>Thu Quyến Rũ — Autumn Gala Fundraiser</span></v-btn></p> --><br/>
       
-      <span style="font-family: 'Verdana', sans-serif; text-align: center;"><br/>MIRA MESA COMMUNITY PARK - FREE ADMISSION</span>
+      <span style="font-family: 'Verdana', sans-serif; text-align: center; font-size: 20px;"><br/><b>MIRA MESA COMMUNITY PARK - FREE ADMISSION</b></span>
       <!-- <v-btn href="#entertainment" large round color="teal" dark v-smooth-scroll><v-icon left style="width:20px;">movie creation</v-icon>Join our entertainment!</v-btn> -->
       <!-- <v-btn href="#sdtet-vendors-section" large round color="teal" dark v-smooth-scroll><v-icon left style="width:20px;">store</v-icon>Become a vendor!</v-btn>
       <v-btn href="#sdtet-sponsors-section" large round color="teal" dark v-smooth-scroll><v-icon left style="width:20px;">business center</v-icon>Sponsor us!</v-btn> -->
@@ -17,7 +17,7 @@
       <v-flex class="sdtet-container" >
         <div class="sdtet-date-container">
           <p class="sdtet-text-align-center"><b>JANUARY</b></p>
-          <table class="sdtet-element-align-center">
+          <table class="sdtet-element-align-center" style="font-size: 20px;">
             <tr>
               <td>24<sup>th</sup></td>
               <td>|</td>
@@ -72,7 +72,7 @@
 
 <style lang="scss">
   .sdtet-jumbotron{
-    background-color: #023C52;
+    background-color: #ffd200;
   }
   .sdtet-banner-message{
     padding-left: 20px;

@@ -1,5 +1,5 @@
 <template>
-  <div class="sdtet-schedule-background">
+  <div class="sdtet-schedule-background" id="sdtet-schedule-section">
 
     <div class="sdtet-schedule-container sdtet-container">
 
