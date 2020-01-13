@@ -4,18 +4,21 @@
     <div class="sdtet-schedule-container sdtet-container">
 
       <br/>
-      <h1>Event Schedule 2020</h1>
+      <h1>Event Schedule</h1>
       <p>Events and times can change without notice</p>
-      <p><v-btn normal round color="teal" href="#entertainment" v-smooth-scroll><span style="color: white">Join Our entertainment program</span></v-btn></p>
+      <!-- <p><v-btn normal round color="amber lighten-1" href="#entertainment" v-smooth-scroll><span style="">Join Our entertainment program</span></v-btn></p> -->
       <v-layout align-center>
 
         <v-layout row class="sdtet-schedule-grid">
-          <!-- <div class="sdtet-schedule-saturday-image-1"></div>
-          <div class="sdtet-schedule-saturday-image-2"></div>
-          <div class="sdtet-schedule-saturday-image-3"></div>
-          <div class="sdtet-schedule-saturday-image-4"></div>
-          <div class="sdtet-schedule-saturday-image-5"></div>
-          <div class="sdtet-schedule-saturday-image-6"></div> -->
+           <div class="sdtet-schedule-image-1"></div>
+          <div class="sdtet-schedule-image-2"></div>
+          <div class="sdtet-schedule-image-3"></div>
+          <div class="sdtet-schedule-image-4"></div>
+          <div class="sdtet-schedule-image-5"></div>
+          <div class="sdtet-schedule-image-6"></div> 
+          <div class="sdtet-schedule-image-7"></div> 
+          <div class="sdtet-schedule-image-8"></div> 
+          <div class="sdtet-schedule-image-9"></div> 
           <v-layout row style="position: relative; flex-wrap: wrap">
 
             <v-flex xs5 sm5 md5 lg5 class="sdtet-schedule-title sdtet-text-align-right ">Main Stage</v-flex>

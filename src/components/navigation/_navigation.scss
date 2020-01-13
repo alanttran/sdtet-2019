@@ -9,12 +9,12 @@
 }
 
 #sdtet-nav-logo img{
-	transition: .5s ease;
+	transition: .3s ease;
 	&:hover{
-		-webkit-transform: rotateZ(-10deg);
-		-ms-transform: rotateZ(-10deg);
-		transform: rotateZ(-10deg);
-		transition: .5s ease;
+		-webkit-transform: rotate(-10deg);
+		-ms-transform: rotate(-10deg);
+		transform: rotate(-10deg);
+		transition: .3s ease;
 	}
 }
 

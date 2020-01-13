@@ -3,7 +3,7 @@
   <div class="sdtet-entertainment-container">
     <div class="sdtet-container">
       <h1 id="entertainment" class="sdtet-text-align-center">Entertainment</h1>
-      <p class="sdtet-text-align-center">Would you like to be part of our entertainment program? Apply below!</p>
+      <!-- <p class="sdtet-text-align-center">Would you like to be part of our entertainment program? Apply below!</p> -->
 
       <v-layout row wrap justify-center>
 
@@ -15,12 +15,12 @@
               <h3 class="headline mb-3">Step Up Dance Competition</h3>
 							<div>Do you love dancing? If you have an up and coming team or a new choreography to try, why not bring yourselves to our stage and wow us for the new year!</div>
 
-              <p v-if="stepUpDanceTimeLeft < 0"><br/><b>Signups TBD</b></p>
+              <p v-if="stepUpDanceTimeLeft < 0"><br/><b>Check out the competion at on {{stepUpDanceDay}}!</b></p>
               
               <div v-if="stepUpDanceTimeLeft >= 0"><b>Deadline: {{stepUpDanceEnd}}</b></div>              
             </v-card-title>
             <v-card-actions>
-              <v-btn v-if="stepUpDanceTimeLeft >= 0" href="https://docs.google.com/forms/d/e/1FAIpQLSfja6BlaKsTy52U2vW8KNGFj1smaMorOm9rmtEA1UgyzccP1g/viewform" target="_blank" block outline round color="teal" dark>Sign up! <span v-if="stepUpDanceTimeLeft < 10">&nbsp;- {{stepUpDanceTimeLeft}} days left!</span> </v-btn>
+              <v-btn v-if="stepUpDanceTimeLeft >= 0" href="https://docs.google.com/forms/d/e/1FAIpQLSfja6BlaKsTy52U2vW8KNGFj1smaMorOm9rmtEA1UgyzccP1g/viewform" target="_blank" block outline round color="lime darken-4">Sign up <span v-if="stepUpDanceTimeLeft < 10">&nbsp;- {{stepUpDanceTimeLeft}} days left!</span> </v-btn>
               
             </v-card-actions>
           </v-card>
@@ -36,8 +36,8 @@
                 <div>The new year is a celebration for everyone as well as the youth! It is probably one of the few times a year that they are able to learn about their culture in an exciting way!</div>
 
                 <div v-if="kidsSpotlightTimeLeft < 0">
-                  <p><br/>See the kids at <b>Cultural Village - Sunday Feb 10 at 1:00pm!</b></p>
-                  <p>Questions? Email: pphhnv@yahoo.com</p>
+                  <p><br/>See the kids at <b>Cultural Village - {{kidsSpotlightDay}}!</b></p>
+                  <p>Questions? Email: info@sdtet.com</p>
                 </div>                
                 
                 <div v-if="kidsSpotlightTimeLeft >= 0">
@@ -46,7 +46,7 @@
               </div>
             </v-card-title>
             <v-card-actions>
-              <v-btn v-if="kidsSpotlightTimeLeft >= 0" href="https://docs.google.com/forms/d/e/1FAIpQLScNCuKiWtoyWI5F_sQsa-Zz9AFCN4Je3QI_ZzLkj3F6kIdZUw/viewform" target="_blank" block outline round color="teal" dark>Sign Up <span v-if="kidsSpotlightTimeLeft < 10">&nbsp;- {{kidsSpotlightTimeLeft}} days left!</span></v-btn>
+              <v-btn v-if="kidsSpotlightTimeLeft >= 0" href="https://docs.google.com/forms/d/e/1FAIpQLScNCuKiWtoyWI5F_sQsa-Zz9AFCN4Je3QI_ZzLkj3F6kIdZUw/viewform" target="_blank" block outline round color="lime darken-4" dark>Sign Up <span v-if="kidsSpotlightTimeLeft < 10">&nbsp;- {{kidsSpotlightTimeLeft}} days left!</span></v-btn>
             </v-card-actions>
           </v-card>
         </v-flex>
@@ -63,7 +63,7 @@
                   songs on stage!</div>
                   
                   <div v-if="goldenVoiceTimeLeft < 0">
-                    <p><br/>Cheer on the singers at <b>Main Stage - Sunday Feb 10 at 1:00pm!</b></p>
+                    <p><br/>Cheer on the singers at <b>Main Stage - {{goldenVoiceDay}}!</b></p>
                     <p>Questions? Email: goldenvoice@sdtet.com</p>
                   </div> 
 
@@ -72,7 +72,7 @@
               </div>
             </v-card-title>
             <v-card-actions>
-              <v-btn v-if="goldenVoiceTimeLeft >= 0" href="https://docs.google.com/forms/d/139EXOZnnJULnUa8Elhepu-c7cytSLSgt7dpi7uOnwCg/edit" target="_blank" block outline round color="teal" dark>Sign up <span v-if="goldenVoiceTimeLeft < 10">&nbsp;- {{goldenVoiceTimeLeft}} days left!</span></v-btn>
+              <v-btn v-if="goldenVoiceTimeLeft >= 0" href="https://docs.google.com/forms/d/139EXOZnnJULnUa8Elhepu-c7cytSLSgt7dpi7uOnwCg/edit" target="_blank" block outline round color="lime darken-4" dark>Sign up <span v-if="goldenVoiceTimeLeft < 10">&nbsp;- {{goldenVoiceTimeLeft}} days left!</span></v-btn>
             </v-card-actions>
           </v-card>
         </v-flex>
@@ -112,15 +112,22 @@
         goldenVoiceTimeLeft: 0,
         stepUpDanceEnd: '',
         kidsSpotlightEnd: '',
-        goldenVoiceEnd: ''
+        goldenVoiceEnd: '',
+        stepUpDanceDay: '',
+        kidsSpotlightDay: '',
+        goldenVoiceDay: ''
       }
     },
     created () {
       var moment = require('moment')
       var todaysdate = moment()
 
+      this.stepUpDanceDay = "Friday Jan 24th at 8:00pm";
+      this.kidsSpotlightDay = "Sunday Jan 26th at 1:00pm";
+      this.goldenVoiceDay = "Sunday Jan 26th at 1:00pm";
+
       var stepUpDanceDate = moment('2020-01-10')
-      var kidsSpotlightDate = moment('2020-01-05')
+      var kidsSpotlightDate = moment('2020-01-02')
       var goldenVoiceDate = moment('2020-01-10')
 
       this.stepUpDanceEnd = stepUpDanceDate.format('LL')

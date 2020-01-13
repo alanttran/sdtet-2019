@@ -7,142 +7,187 @@ $sdtet-schedule-text-shadow: -1px -1px 2px white,
 position: relative;
 }
 
-.sdtet-schedule-saturday-image-1{
-  //background-image: url('../../assets/JrodTwins.png');
+@mixin schedule-image-font{
+  font-weight: 600;
+  font-size: 22px;
+  -webkit-text-stroke: 1px #263238;
+  -webkit-text-fill-color: #FFC400;
+}
+
+@mixin schedule-background-image{
   position: absolute;
   z-index: 0;
-  top: calc(38% + 5px);
-  left: 0;
+
+  @media screen and (max-width: 1279px) {
+    display: none;
+  }
+}
+
+.sdtet-schedule-image-1{
+  background-image: url('../../assets/new-wave-tour.png');
+  background-size: contain;
+  top: calc(50% + 5px);
+  left: 130px;
   width: 500px;
-  height: 378px;
+  height: 250px;
+  @include schedule-background-image;
   &:before{
-    content:"JRod Twins - Jason & Justin";
-    color: white;
+    content:"New Wave Tour";
     position: absolute;
-    bottom: 60px;
-    font-size: 18px;
+    bottom: -30px;
     left: 50px;
-    font-weight: 600;
-    text-shadow: 0 0 2px black;
-  }
-  @media screen and (max-width: 1279px) {
-    display: none;
+    @include schedule-image-font;
+    font-size: 24px;
   }
 }
 
-.sdtet-schedule-saturday-image-2{
-  //background-image: url('../../assets/TrucLam-TrucLinh.png');
-  position: absolute;
-  z-index: 0;
-  top: calc(38% + 5px);
-  right: 80px;
-  width: 400px;
-  height: 378px;
+.sdtet-schedule-image-2{
+  background-image: url('../../assets/vvhatever.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 105%;
+  @include schedule-background-image;
+  top: calc(37% + 5px);
+  left: 300px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
   &:before{
-    content:"Truc Lam & Truc Linh";
-    color: white;
+    content:"V.Vhatever";
     position: absolute;
-    bottom: 50px;
-    font-size: 18px;
-    left: 140px;
-    font-weight: 600;
-    text-shadow: 0 0 2px black;
-  }
-
-  @media screen and (max-width: 1279px) {
-    display: none;
+    bottom: -35px;
+    left: 0px;
+    @include schedule-image-font;
   }
 }
 
-.sdtet-schedule-saturday-image-3{
-  //background-image: url('../../assets/DiepThanhThanh.png');
-  position: absolute;
-  z-index: 0;
-  bottom: 17px;
-  left: 80px;
-  width: 400px;
-  height: 419px;
+.sdtet-schedule-image-3{
+  background-image: url('../../assets/lilybui.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 125%;
+  top: calc(32% + 5px);
+  left: 180px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  @include schedule-background-image;
   &:before{
-    content:"Diep Thanh Thanh";
-    color: white;
+    content:"Lily Bee";
     position: absolute;
-    bottom: 30px;
-    font-size: 18px;
-    left: 100px;
-    font-weight: 600;
-    text-shadow: 0 0 2px black;
-  }
-  @media screen and (max-width: 1279px) {
-    display: none;
+    bottom: -35px;
+    left: 11px;
+    @include schedule-image-font;
   }
 }
 
-.sdtet-schedule-saturday-image-4{
-  //background-image: url('../../assets/TuanQuynh.png');
-  position: absolute;
-  z-index: 0;
-  bottom: 17px;
-  right: 80px;
-  width: 400px;
-  height: 410px;
+.sdtet-schedule-image-4{
+  background-image: url('../../assets/BAO.jpg');
+  background-repeat: no-repeat;
+  background-position: center 10%;
+  background-size: 300%;
+  top: calc(42% + 5px);
+  left: 180px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  @include schedule-background-image;
   &:before{
-    content:"Tuan Quynh";
-    color: white;
+    content:"BAO";
     position: absolute;
-    bottom: 20px;
-    font-size: 18px;
-    left: 150px;
-    font-weight: 600;
-    text-shadow: 0 0 2px black;
-  }
-  @media screen and (max-width: 1279px) {
-    display: none;
+    bottom: -35px;
+    left: 27px;
+    @include schedule-image-font;
   }
 }
 
-.sdtet-schedule-saturday-image-5{
+.sdtet-schedule-image-5{
   background-image: url('../../assets/stepupdance.png');
-  position: absolute;
-  z-index: 0;
-  top: 9%;
-  left: 100px;
-  width: 400px;
-  height: 251px;
+  background-repeat: no-repeat;
+  background-size:100%;
+  top: 21%;
+  left: 176px;
+  width: 200px;
+  height: 150px;
+  @include schedule-background-image;
   &:before{
     content:"Step Up Dance Competition";
-    color: white;
     position: absolute;
     bottom: 50px;
-    font-size: 18px;
     left: 50px;
-    font-weight: 600;
-    text-shadow: 0 0 2px black;
-  }
-  @media screen and (max-width: 1279px) {
-    display: none;
+    @include schedule-image-font;
   }
 }
 
-.sdtet-schedule-saturday-image-6{
+.sdtet-schedule-image-6{
   background-image: url('../../assets/lion-dancing.png');
-  position: absolute;
-  z-index: 0;
-  top: 120px;
-  right: 100px;
-  width: 400px;
-  height: 276px;
+  background-repeat: no-repeat;
+  background-size:100%;
+  top: 207px;
+  right: 116px;
+  width: 250px;
+  height: 212px;
+  @include schedule-background-image;
   &:before{
     content:"Lion Dancing";
-    color: white;
     position: absolute;
-    bottom: 50px;
-    font-size: 18px;
+    bottom: 0px;
     right: 50px;
-    font-weight: 600;
-    text-shadow: 0 0 2px black;
+    @include schedule-image-font;
   }
-  @media screen and (max-width: 1279px) {
-    display: none;
+}
+
+.sdtet-schedule-image-7{
+  background-image: url('../../assets/black-leather-couch.png');
+  background-repeat: no-repeat;
+  background-size:100%;
+  top: 200px;
+  left: 100px;
+  width: 250px;
+  height: 170px;
+  @include schedule-background-image;
+  &:before{
+    content:"Black Leather Couch";
+    position: absolute;
+    bottom: 0px;
+    left: 31px;
+    @include schedule-image-font;
+  }
+}
+
+.sdtet-schedule-image-8{
+  background-image: url('../../assets/green-lantern.png');
+  background-repeat: no-repeat;
+  background-size:100%;
+  top: calc(39% + 5px);
+  right: 200px;
+  width: 250px;
+  height: 415px;
+  @include schedule-background-image;
+  &:before{
+    content:"Green Lantern: Legacy";
+    position: absolute;
+    bottom: 0px;
+    left: 31px;
+    @include schedule-image-font;
+  }
+}
+
+.sdtet-schedule-image-9{
+  background-image: url('../../assets/gia-huy.png');
+  background-repeat: no-repeat;
+  background-size:100%;
+  bottom: 50px;
+  left: 200px;
+  width: 250px;
+  height: 415px;
+  @include schedule-background-image;
+  &:before{
+    content:"Gia Huy";
+    position: absolute;
+    bottom: 0px;
+    left: 50px;
+    @include schedule-image-font;
   }
 }
 

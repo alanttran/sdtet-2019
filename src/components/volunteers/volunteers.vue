@@ -25,7 +25,7 @@
             <div v-else>
               <p><span class="sdtet-text-red-bold">Signups are open again!</span></p>
               <a target="_blank" v-bind:href="volunteerData.signup_form_url">
-                <v-btn round color="teal" dark>Sign up now!</v-btn>
+                <v-btn round color="amber lighten-1">Sign up now!</v-btn>
               </a>
             </div>
             
