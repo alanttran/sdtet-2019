@@ -6,7 +6,7 @@
 	],
 	"pageant_year": "2020",
 	"slogan": "",
-	"voting": false,
+	"voting": true,
 	"signups_open": true,
 	"signups_close_date": "2019-10-29"
 }

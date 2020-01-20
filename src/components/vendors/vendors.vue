@@ -12,13 +12,15 @@
 				</v-flex>
 				<v-flex xs12 md6 lg6 class="sdtet-text-align-center">
 					<div class="sdtet-h1-spacer"><h1>&nbsp;</h1></div>
-					<h2>Select your booth to <b>apply or pay</b></h2>
+					<!-- <h2>Select your booth to <b>apply or pay</b></h2> -->
+					<h2 style="width: 250px; margin: 0 auto;">Vendor signups are now closed. If you have any questions, please contact vendor@sdtet.com</h2>
 					<p v-if="vendorData.isAppOpen"></p>
 					<v-layout row wrap justify-space-around>
-						<v-flex xs6 sm6 lg6><GameCommercialBooth></GameCommercialBooth></v-flex>
+						<!-- <v-flex xs6 sm6 lg6><GameCommercialBooth></GameCommercialBooth></v-flex>
 						<v-flex xs6 sm6 lg6><InfoArtBooth></InfoArtBooth></v-flex>
-						<v-flex xs6 sm6 lg6 style="display: flex; justify-content: center; align-items: center"><!-- <FoodBeverageBooth></FoodBeverageBooth> --><div><b>Food vendors spots are sold out!</b><br/><br/> If you have any questions or would like to be on the waitlist, contact vendor@sdtet.com</div></v-flex>
-						<v-flex xs6 sm6 lg6><NonProfitGovBooth></NonProfitGovBooth></v-flex>                     
+						<v-flex xs6 sm6 lg6 style="display: flex; justify-content: center; align-items: center"><FoodBeverageBooth></FoodBeverageBooth><div><b>Food vendors spots are sold out!</b><br/><br/> If you have any questions or would like to be on the waitlist, contact vendor@sdtet.com</div></v-flex>
+						<v-flex xs6 sm6 lg6><NonProfitGovBooth></NonProfitGovBooth></v-flex> -->      
+						 <div></div>              
 					</v-layout>
 				</v-flex>
 			</v-layout>

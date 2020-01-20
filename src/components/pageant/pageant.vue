@@ -9,7 +9,7 @@
         <v-btn href="https://forms.gle/dB2hLkfNsWqXo4Y58" target="_blank" large round color="teal" dark v-smooth-scroll >Sign up for Pageant 2020!</v-btn>
       </div>
       <div v-else>
-        <p><span class="navy"><b>Join us on Saturday January 25th at 5:30PM on the main stage to cheer on our girls!</b></span></p>
+        <p><span class="navy"><b>Join us on Saturday January 25th at 6:30PM on the main stage to cheer on our girls!</b></span></p>
       </div>
       
     </div>
@@ -26,30 +26,30 @@
     <h2 class="sdtet-text-align-center">{{pageantData.slogan}}</h2>
     <!-- <div class="sdtet-text-align-center"><img style="height: 600px;" src="../../assets/pageant-preview-2019.png" alt=""></div> -->
     <div style="max-width: 750px; margin: 0 auto">
-      <iframe width="100%" height="415" style="max-width:750px" src="https://www.youtube.com/embed/e8w5qf2yLOU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+      <iframe width="100%" height="415" src="https://www.youtube.com/embed/HJZmvB7tIOw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div><br/>
+    <h1 class="sdtet-text-align-center">Vote for your favorite!</h1>
     
-    <!-- <v-container mb-4>
+    <v-container mb-4>
       <v-layout id="contestants" row wrap>
-        <v-flex v-for="contestant in contestants" :key="contestant.id" xs12 sm6 md4 lg3>
-          <v-card height="670px" class="ma-1" style="display: flex; flex-direction: column">
+        <v-flex style="display: flex; flex-direction: column" v-for="contestant in contestants" :key="contestant.id" xs12 sm6 md4 lg4>
+          <v-card class="ma-4" style="flex: auto; display: flex; flex-direction: column">
             <v-card-media :src="contestant.main_image_link" height="300px" style="background-position: center top; flex: none">
+              <v-btn class="msvn-vote-button" v-if="pageantData.voting" :href="contestant.fb_link" target="_blank" round small color="amber darken-1" dark>Vote!</v-btn>
             </v-card-media>
             <v-card-title primary-title class="pb-0" style="flex: 300px; align-items: start">
               <div>
-                <h3 class="headline mb-3">{{contestant.pageant_number}}. {{contestant.first_name}} {{contestant.last_name}}</h3>
-                <h4 class="headline mb-3" style="color: red">{{contestant.title}}</h4>
+                <h4 class="title mb-3">{{contestant.pageant_number}}. {{contestant.first_name}} {{contestant.last_name}}</h4>
+                <h4 class="title mb-3" style="color: red">{{contestant.title}}</h4>
                 <p><i>{{contestant.school}}</i></p>
                 <p>"{{contestant.bio}}"</p>
               </div>
             </v-card-title>
-            <v-card-actions class="pb-3 pt-0" style="flex: none">
-              <v-btn v-if="pageantData.voting" :href="contestant.fb_link" target="_blank" block outline round color="teal" dark>Vote for {{contestant.first_name}}!</v-btn>
-            </v-card-actions>
+              
           </v-card>
         </v-flex>
       </v-layout>
-    </v-container> -->
+    </v-container>
   </div>
 </template>
 

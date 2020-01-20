@@ -10,7 +10,7 @@
       <v-layout align-center>
 
         <v-layout row class="sdtet-schedule-grid">
-           <div class="sdtet-schedule-image-1"></div>
+          <div class="sdtet-schedule-image-1"></div>
           <div class="sdtet-schedule-image-2"></div>
           <div class="sdtet-schedule-image-3"></div>
           <div class="sdtet-schedule-image-4"></div>
@@ -37,7 +37,7 @@
               <v-flex v-if="!hideSchedule" xs5 sm5 md5 lg5 class="sdtet-schedule-main-stage">
                 {{events[0] ? events[0].english_event: ""}}
               </v-flex>
-              <v-flex v-if="!hideSchedule" xs2 sm2 md2 lg2 class="sdtet-schedule-date pa-2">{{start_time}} </v-flex>
+              <v-flex v-if="!hideSchedule" xs2 sm2 md2 lg2 class="sdtet-schedule-date pa-2">{{start_time}} <div v-if="start_time == '10:00 PM'">Festival Closes</div> <div v-if="start_time == '5:00 PM'">Festival Opens</div> </v-flex>
               <v-flex v-if="!hideSchedule" xs5 sm5 md5 lg5 class="sdtet-schedule-cultural-village">
                 {{events[1] ? events[1].english_event : ""}}
               </v-flex>
@@ -58,7 +58,7 @@
               <v-flex v-if="!hideSchedule" xs5 sm5 md5 lg5 class="sdtet-schedule-main-stage">
                 {{events[0] ? events[0].english_event: ""}}
               </v-flex>
-              <v-flex v-if="!hideSchedule" xs2 sm2 md2 lg2 class="sdtet-schedule-date pa-2">{{start_time}} </v-flex>
+              <v-flex v-if="!hideSchedule" xs2 sm2 md2 lg2 class="sdtet-schedule-date pa-2">{{start_time}} <div v-if="start_time == '10:00 PM'">Festival Closes</div> <div v-if="start_time == '11:00 AM'">Festival Opens</div> </v-flex>
               <v-flex v-if="!hideSchedule" xs5 sm5 md5 lg5 class="sdtet-schedule-cultural-village">
                 {{events[1] ? events[1].english_event : ""}}
               </v-flex>
@@ -75,7 +75,7 @@
               <v-flex v-if="!hideSchedule" xs5 sm5 md5 lg5 class="sdtet-schedule-main-stage">
                 {{events[0] ? events[0].english_event: ""}}
               </v-flex>
-              <v-flex v-if="!hideSchedule" xs2 sm2 md2 lg2 class="sdtet-schedule-date pa-2">{{start_time}} <div v-if="start_time == '9:00 PM'">Carnival Closes</div> <div v-if="start_time == '6:00 PM'">Festival Closes</div></v-flex>
+              <v-flex v-if="!hideSchedule" xs2 sm2 md2 lg2 class="sdtet-schedule-date pa-2">{{start_time}} <div v-if="start_time == '9:00 PM'">Carnival Closes</div> <div v-if="start_time == '11:00 AM'">Festival Opens</div> <div v-if="start_time == '6:00 PM'">Festival Closes</div></v-flex>
               <v-flex v-if="!hideSchedule" xs5 sm5 md5 lg5 class="sdtet-schedule-cultural-village">
                 {{events[1] ? events[1].english_event : ""}}
               </v-flex>

@@ -8,6 +8,9 @@
       <img style="width: 80%" src="../../assets/sdtet_web_header.png" alt="">
 
       <!-- <p style="text-align: center; margin-top: 15px;"><span style="font-size: 20px;">Join us at our Autumn Gala Fundraiser! November 9th!</span> <v-btn normal round color="light-green lighten-2" target="_blank" href="https://business.facebook.com/events/1229801887192852/"><span>Thu Quyến Rũ — Autumn Gala Fundraiser</span></v-btn></p> --><br/>
+      <div style="max-width: 700px; width: 80%">
+        <iframe width="100%" height="335" src="https://www.youtube.com/embed/aR0iNq8FPcM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
       
       <span style="font-family: 'Verdana', sans-serif; text-align: center; font-size: 20px;"><br/><b>MIRA MESA COMMUNITY PARK - FREE ADMISSION</b></span>
       <!-- <v-btn href="#entertainment" large round color="teal" dark v-smooth-scroll><v-icon left style="width:20px;">movie creation</v-icon>Join our entertainment!</v-btn> -->
