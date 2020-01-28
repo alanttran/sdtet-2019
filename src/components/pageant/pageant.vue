@@ -28,7 +28,7 @@
     <div style="max-width: 750px; margin: 0 auto">
       <iframe width="100%" height="415" src="https://www.youtube.com/embed/HJZmvB7tIOw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div><br/>
-    <h1 class="sdtet-text-align-center">Vote for your favorite!</h1>
+    <!-- <h1 class="sdtet-text-align-center">Congratulations!</h1> -->
     
     <v-container mb-4>
       <v-layout id="contestants" row wrap>
