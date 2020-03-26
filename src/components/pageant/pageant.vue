@@ -24,10 +24,10 @@
     <br/>
     <h1 class="sdtet-text-align-center">Pageant {{pageantData.pageant_year}}</h1>
     <h2 class="sdtet-text-align-center">{{pageantData.slogan}}</h2>
-    <!-- <div class="sdtet-text-align-center"><img style="height: 600px;" src="../../assets/pageant-preview-2019.png" alt=""></div> -->
-    <div style="max-width: 750px; margin: 0 auto">
+    <div class="sdtet-text-align-center"><img style="" src="../../assets/pageant2020.jpg" alt=""></div>
+    <!-- <div style="max-width: 750px; margin: 0 auto">
       <iframe width="100%" height="415" src="https://www.youtube.com/embed/HJZmvB7tIOw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div><br/>
+    </div><br/> -->
     <!-- <h1 class="sdtet-text-align-center">Congratulations!</h1> -->
     
     <v-container mb-4>
