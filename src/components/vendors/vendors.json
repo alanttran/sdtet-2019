@@ -9,7 +9,7 @@
 	"email": "vendor@sdtet.com",
 	"foodApplicationURL": "https://forms.gle/xqTAGXYbmvyaZHmf7",
 	"vendorApplicationURL": "https://forms.gle/roLsyAuY2LiVcgoa9",
-	"isAppOpen": true,
+	"isAppOpen": false,
 	"foodAvail": false,
 	"gameAvail": true,
 	"infoAvail": true,

@@ -52,7 +52,6 @@
         </div>
       </v-flex>
     </v-layout>
-    
   </div>
 </template>
 

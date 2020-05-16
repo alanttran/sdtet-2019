@@ -1,83 +1,133 @@
 <template>
-<v-parallax  height="800px" :src="require('@/assets/tet-bg-02.jpg')">
-  <div class="sdtet-entertainment-container">
-    <div class="sdtet-container">
-      <h1 id="entertainment" class="sdtet-text-align-center">Entertainment</h1>
-      <!-- <p class="sdtet-text-align-center">Would you like to be part of our entertainment program? Apply below!</p> -->
+  <v-parallax height="800px" :src="require('@/assets/tet-bg-02.jpg')">
+    <div class="sdtet-entertainment-container">
+      <div class="sdtet-container">
+        <h1 id="entertainment" class="sdtet-text-align-center">Entertainment</h1>
+        <!-- <p class="sdtet-text-align-center">Would you like to be part of our entertainment program? Apply below!</p> -->
 
-      <v-layout row wrap justify-center>
+        <v-layout row wrap justify-center>
+          <v-flex sm12 md4 lg3>
+            <v-card class="sdtet-entertainment-card">
+              <v-card-media :src="require('@/assets/StepUpDance.jpg')" height="200px"></v-card-media>
+              <v-card-title primary-title>
+                <h3 class="headline mb-3">Step Up Dance Competition</h3>
+                <div>Do you love dancing? If you have an up and coming team or a new choreography to try, why not bring yourselves to our stage and wow us for the new year!</div>
 
-        <v-flex sm12 md4 lg3>
-          <v-card class="sdtet-entertainment-card">
-            <v-card-media :src="require('@/assets/StepUpDance.jpg')" height="200px">
-            </v-card-media>
-            <v-card-title primary-title>
-              <h3 class="headline mb-3">Step Up Dance Competition</h3>
-							<div>Do you love dancing? If you have an up and coming team or a new choreography to try, why not bring yourselves to our stage and wow us for the new year!</div>
+                <p v-if="stepUpDanceTimeLeft < 0">
+                  <br />
+                  <b>Check out the competion at on {{stepUpDanceDay}}!</b>
+                </p>
 
-              <p v-if="stepUpDanceTimeLeft < 0"><br/><b>Check out the competion at on {{stepUpDanceDay}}!</b></p>
-              
-              <div v-if="stepUpDanceTimeLeft >= 0"><b>Deadline: {{stepUpDanceEnd}}</b></div>              
-            </v-card-title>
-            <v-card-actions>
-              <v-btn v-if="stepUpDanceTimeLeft >= 0" href="https://docs.google.com/forms/d/e/1FAIpQLSfja6BlaKsTy52U2vW8KNGFj1smaMorOm9rmtEA1UgyzccP1g/viewform" target="_blank" block outline round color="lime darken-4">Sign up <span v-if="stepUpDanceTimeLeft < 10">&nbsp;- {{stepUpDanceTimeLeft}} days left!</span> </v-btn>
-              
-            </v-card-actions>
-          </v-card>
-        </v-flex>
-
-        <v-flex sm12 md4 lg3>
-          <v-card class="sdtet-entertainment-card">
-            <v-card-media :src="require('@/assets/KidsSpotlight.jpg')" height="200px">
-            </v-card-media>
-            <v-card-title primary-title>
-              <div>
-                <h3 class="headline mb-3">Kid's Spotlight</h3>
-                <div>The new year is a celebration for everyone as well as the youth! It is probably one of the few times a year that they are able to learn about their culture in an exciting way!</div>
-
-                <div v-if="kidsSpotlightTimeLeft < 0">
-                  <p><br/>See the kids at <b>Cultural Village - {{kidsSpotlightDay}}!</b></p>
-                  <p>Questions? Email: info@sdtet.com</p>
-                </div>                
-                
-                <div v-if="kidsSpotlightTimeLeft >= 0">
-                  <div><br/><b>Deadline: {{kidsSpotlightEnd}}</b></div>                  
+                <div v-if="stepUpDanceTimeLeft >= 0">
+                  <b>Deadline: {{stepUpDanceEnd}}</b>
                 </div>
-              </div>
-            </v-card-title>
-            <v-card-actions>
-              <v-btn v-if="kidsSpotlightTimeLeft >= 0" href="https://docs.google.com/forms/d/e/1FAIpQLScNCuKiWtoyWI5F_sQsa-Zz9AFCN4Je3QI_ZzLkj3F6kIdZUw/viewform" target="_blank" block outline round color="lime darken-4" dark>Sign Up <span v-if="kidsSpotlightTimeLeft < 10">&nbsp;- {{kidsSpotlightTimeLeft}} days left!</span></v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-flex>
+              </v-card-title>
+              <v-card-actions>
+                <v-btn
+                  v-if="stepUpDanceTimeLeft >= 0"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfja6BlaKsTy52U2vW8KNGFj1smaMorOm9rmtEA1UgyzccP1g/viewform"
+                  target="_blank"
+                  block
+                  outline
+                  round
+                  color="lime darken-4"
+                >
+                  Sign up
+                  <span v-if="stepUpDanceTimeLeft < 10">&nbsp;- {{stepUpDanceTimeLeft}} days left!</span>
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-flex>
 
-        <v-flex sm12 md4 lg3>
-          <v-card class="sdtet-entertainment-card">
-            <v-card-media :src="require('@/assets/GoldenVoice.jpg')" height="200px">
-            </v-card-media>
-            <v-card-title primary-title>
-              <div>
-                <h3 class="headline mb-3">Golden Voice</h3>
-                <div>Do you love singing? We do! Karaoke is basically in our blood! For
-                  the new year, we would love to listen to you perform your favorite
-                  songs on stage!</div>
-                  
+          <v-flex sm12 md4 lg3>
+            <v-card class="sdtet-entertainment-card">
+              <v-card-media :src="require('@/assets/KidsSpotlight.jpg')" height="200px"></v-card-media>
+              <v-card-title primary-title>
+                <div>
+                  <h3 class="headline mb-3">Kid's Spotlight</h3>
+                  <div>The new year is a celebration for everyone as well as the youth! It is probably one of the few times a year that they are able to learn about their culture in an exciting way!</div>
+
+                  <div v-if="kidsSpotlightTimeLeft < 0">
+                    <p>
+                      <br />See the kids at
+                      <b>Cultural Village - {{kidsSpotlightDay}}!</b>
+                    </p>
+                    <p>Questions? Email: info@sdtet.com</p>
+                  </div>
+
+                  <div v-if="kidsSpotlightTimeLeft >= 0">
+                    <div>
+                      <br />
+                      <b>Deadline: {{kidsSpotlightEnd}}</b>
+                    </div>
+                  </div>
+                </div>
+              </v-card-title>
+              <v-card-actions>
+                <v-btn
+                  v-if="kidsSpotlightTimeLeft >= 0"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScNCuKiWtoyWI5F_sQsa-Zz9AFCN4Je3QI_ZzLkj3F6kIdZUw/viewform"
+                  target="_blank"
+                  block
+                  outline
+                  round
+                  color="lime darken-4"
+                  dark
+                >
+                  Sign Up
+                  <span
+                    v-if="kidsSpotlightTimeLeft < 10"
+                  >&nbsp;- {{kidsSpotlightTimeLeft}} days left!</span>
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-flex>
+
+          <v-flex sm12 md4 lg3>
+            <v-card class="sdtet-entertainment-card">
+              <v-card-media :src="require('@/assets/GoldenVoice.jpg')" height="200px"></v-card-media>
+              <v-card-title primary-title>
+                <div>
+                  <h3 class="headline mb-3">Golden Voice</h3>
+                  <div>
+                    Do you love singing? We do! Karaoke is basically in our blood! For
+                    the new year, we would love to listen to you perform your favorite
+                    songs on stage!
+                  </div>
+
                   <div v-if="goldenVoiceTimeLeft < 0">
-                    <p><br/>Cheer on the singers at <b>Main Stage - {{goldenVoiceDay}}!</b></p>
+                    <p>
+                      <br />Cheer on the singers at
+                      <b>Main Stage - {{goldenVoiceDay}}!</b>
+                    </p>
                     <p>Questions? Email: goldenvoice@sdtet.com</p>
-                  </div> 
+                  </div>
 
-                  <div v-if="goldenVoiceTimeLeft >= 0"><br/><b>Deadline: {{goldenVoiceEnd}}</b></div>
-                  
-              </div>
-            </v-card-title>
-            <v-card-actions>
-              <v-btn v-if="goldenVoiceTimeLeft >= 0" href="https://docs.google.com/forms/d/139EXOZnnJULnUa8Elhepu-c7cytSLSgt7dpi7uOnwCg/edit" target="_blank" block outline round color="lime darken-4" dark>Sign up <span v-if="goldenVoiceTimeLeft < 10">&nbsp;- {{goldenVoiceTimeLeft}} days left!</span></v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-flex>
+                  <div v-if="goldenVoiceTimeLeft >= 0">
+                    <br />
+                    <b>Deadline: {{goldenVoiceEnd}}</b>
+                  </div>
+                </div>
+              </v-card-title>
+              <v-card-actions>
+                <v-btn
+                  v-if="goldenVoiceTimeLeft >= 0"
+                  href="https://docs.google.com/forms/d/139EXOZnnJULnUa8Elhepu-c7cytSLSgt7dpi7uOnwCg/edit"
+                  target="_blank"
+                  block
+                  outline
+                  round
+                  color="lime darken-4"
+                  dark
+                >
+                  Sign up
+                  <span v-if="goldenVoiceTimeLeft < 10">&nbsp;- {{goldenVoiceTimeLeft}} days left!</span>
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-flex>
 
-        <!-- <v-flex sm12 md4 lg3>
+          <!-- <v-flex sm12 md4 lg3>
           <v-card class="sdtet-entertainment-card">
             <v-card-media src="https://purrfectcatbreeds.com/wp-content/uploads/2016/06/cute-cat-halloween-costumes.jpg" height="200px">
             </v-card-media>
@@ -94,53 +144,51 @@
               
             </v-card-actions>
           </v-card>
-        </v-flex> -->
-
-      </v-layout>
-
+          </v-flex>-->
+        </v-layout>
+      </div>
     </div>
-  </div>
-</v-parallax>
+  </v-parallax>
 </template>
 
 <script type="text/javascript">
-  export default{
-    data () {
-      return {
-        stepUpDanceTimeLeft: 0,
-        kidsSpotlightTimeLeft: 0,
-        goldenVoiceTimeLeft: 0,
-        stepUpDanceEnd: '',
-        kidsSpotlightEnd: '',
-        goldenVoiceEnd: '',
-        stepUpDanceDay: '',
-        kidsSpotlightDay: '',
-        goldenVoiceDay: ''
-      }
-    },
-    created () {
-      var moment = require('moment')
-      var todaysdate = moment()
+export default {
+  data() {
+    return {
+      stepUpDanceTimeLeft: 0,
+      kidsSpotlightTimeLeft: 0,
+      goldenVoiceTimeLeft: 0,
+      stepUpDanceEnd: "",
+      kidsSpotlightEnd: "",
+      goldenVoiceEnd: "",
+      stepUpDanceDay: "",
+      kidsSpotlightDay: "",
+      goldenVoiceDay: ""
+    };
+  },
+  created() {
+    var moment = require("moment");
+    var todaysdate = moment();
 
-      this.stepUpDanceDay = "Friday Jan 24th at 8:00pm";
-      this.kidsSpotlightDay = "Sunday Jan 26th at 1:00pm";
-      this.goldenVoiceDay = "Sunday Jan 26th at 1:00pm";
+    this.stepUpDanceDay = "Friday Jan 24th at 8:00pm";
+    this.kidsSpotlightDay = "Sunday Jan 26th at 1:00pm";
+    this.goldenVoiceDay = "Sunday Jan 26th at 1:00pm";
 
-      var stepUpDanceDate = moment('2020-01-10')
-      var kidsSpotlightDate = moment('2020-01-02')
-      var goldenVoiceDate = moment('2020-01-10')
+    var stepUpDanceDate = moment("2020-01-10");
+    var kidsSpotlightDate = moment("2020-01-02");
+    var goldenVoiceDate = moment("2020-01-10");
 
-      this.stepUpDanceEnd = stepUpDanceDate.format('LL')
-      this.kidsSpotlightEnd = kidsSpotlightDate.format('LL')
-      this.goldenVoiceEnd = goldenVoiceDate.format('LL')
-      
-      this.stepUpDanceTimeLeft = stepUpDanceDate.diff(todaysdate, 'days')
-      this.kidsSpotlightTimeLeft = kidsSpotlightDate.diff(todaysdate, 'days')
-      this.goldenVoiceTimeLeft = goldenVoiceDate.diff(todaysdate, 'days')
-    }
+    this.stepUpDanceEnd = stepUpDanceDate.format("LL");
+    this.kidsSpotlightEnd = kidsSpotlightDate.format("LL");
+    this.goldenVoiceEnd = goldenVoiceDate.format("LL");
+
+    this.stepUpDanceTimeLeft = stepUpDanceDate.diff(todaysdate, "days");
+    this.kidsSpotlightTimeLeft = kidsSpotlightDate.diff(todaysdate, "days");
+    this.goldenVoiceTimeLeft = goldenVoiceDate.diff(todaysdate, "days");
   }
+};
 </script>
 
 <style lang="scss">
-  @import 'entertainment';
+@import "entertainment";
 </style>

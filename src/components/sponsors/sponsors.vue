@@ -12,17 +12,7 @@
             <b>Questions or details?: </b>
             <a href="mailto:sponsor@sdtet.com">sponsor@sdtet.com</a>
           </p>
-          <div v-for="text in sponsorData.text" :key="text.id">
-            <p>{{text}}</p>
-          </div>
-          <p>
-            <ul v-for="text in sponsorData.benefitsList" :key="text.id">
-              <li>{{text}}</li>
-            </ul>
-          </p>
-          <div v-for="text in sponsorData.closingText" :key="text.id">
-            <p>{{text}}</p>
-          </div>
+          <div v-html="sponsorText"></div>
         </v-flex>
 
         <v-flex xs12 md7 lg7 class="sdtet-text-align-center">
@@ -43,12 +33,14 @@
 <script type="text/javascript">
   import axios from 'axios'
   import data from './sponsors.json'
+  import markdown from './sponsors.md'
 
   export default {
     data () {
       return {
         sponsors: [],
-        sponsorData: data
+        sponsorData: data,
+        sponsorText: markdown
       }
     },
     created () {
