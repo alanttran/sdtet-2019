@@ -8,20 +8,18 @@
         <v-layout row wrap justify-center>
           <v-flex sm12 md4 lg3>
             <v-card class="sdtet-entertainment-card">
-              <v-card-media :src="require('@/assets/StepUpDance.jpg')" height="200px"></v-card-media>
-              <v-card-title primary-title>
-                <h3 class="headline mb-3">Step Up Dance Competition</h3>
-                <div>Do you love dancing? If you have an up and coming team or a new choreography to try, why not bring yourselves to our stage and wow us for the new year!</div>
-
+              <v-img :src="require('@/assets/StepUpDance.jpg')" class="white--text align-end">
+                <v-card-title>Step Up Dance Competition</v-card-title>
+              </v-img>
+              <v-card-text class="black--text">
+                <div v-html="stepUpDanceText"></div>
                 <p v-if="stepUpDanceTimeLeft < 0">
-                  <br />
                   <b>Check out the competion at on {{stepUpDanceDay}}!</b>
                 </p>
-
-                <div v-if="stepUpDanceTimeLeft >= 0">
+                <p v-if="stepUpDanceTimeLeft >= 0">
                   <b>Deadline: {{stepUpDanceEnd}}</b>
-                </div>
-              </v-card-title>
+                </p>
+              </v-card-text>
               <v-card-actions>
                 <v-btn
                   v-if="stepUpDanceTimeLeft >= 0"
@@ -33,7 +31,9 @@
                   color="lime darken-4"
                 >
                   Sign up
-                  <span v-if="stepUpDanceTimeLeft < 10">&nbsp;- {{stepUpDanceTimeLeft}} days left!</span>
+                  <span
+                    v-if="stepUpDanceTimeLeft < 10"
+                  >&nbsp;- {{stepUpDanceTimeLeft}} days left!</span>
                 </v-btn>
               </v-card-actions>
             </v-card>
@@ -41,28 +41,28 @@
 
           <v-flex sm12 md4 lg3>
             <v-card class="sdtet-entertainment-card">
-              <v-card-media :src="require('@/assets/KidsSpotlight.jpg')" height="200px"></v-card-media>
-              <v-card-title primary-title>
-                <div>
-                  <h3 class="headline mb-3">Kid's Spotlight</h3>
-                  <div>The new year is a celebration for everyone as well as the youth! It is probably one of the few times a year that they are able to learn about their culture in an exciting way!</div>
+              <v-img :src="require('@/assets/KidsSpotlight.jpg')" class="white--text align-end">
+                <v-card-title style="text-shadow: 1px solid black">Kid's Spotlight</v-card-title>
+              </v-img>
 
-                  <div v-if="kidsSpotlightTimeLeft < 0">
-                    <p>
-                      <br />See the kids at
-                      <b>Cultural Village - {{kidsSpotlightDay}}!</b>
-                    </p>
-                    <p>Questions? Email: info@sdtet.com</p>
-                  </div>
+              <v-card-text class="black--text">
+                <div v-html="kidsSpotlightText"></div>
 
-                  <div v-if="kidsSpotlightTimeLeft >= 0">
-                    <div>
-                      <br />
-                      <b>Deadline: {{kidsSpotlightEnd}}</b>
-                    </div>
+                <div v-if="kidsSpotlightTimeLeft < 0">
+                  <p>
+                    See the kids at
+                    <b>Cultural Village - {{kidsSpotlightDay}}!</b>
+                  </p>
+                  <p>Questions? Email: info@sdtet.com</p>
+                </div>
+
+                <div v-if="kidsSpotlightTimeLeft >= 0">
+                  <div>
+                    <br />
+                    <b>Deadline: {{kidsSpotlightEnd}}</b>
                   </div>
                 </div>
-              </v-card-title>
+              </v-card-text>
               <v-card-actions>
                 <v-btn
                   v-if="kidsSpotlightTimeLeft >= 0"
@@ -85,30 +85,25 @@
 
           <v-flex sm12 md4 lg3>
             <v-card class="sdtet-entertainment-card">
-              <v-card-media :src="require('@/assets/GoldenVoice.jpg')" height="200px"></v-card-media>
-              <v-card-title primary-title>
-                <div>
-                  <h3 class="headline mb-3">Golden Voice</h3>
-                  <div>
-                    Do you love singing? We do! Karaoke is basically in our blood! For
-                    the new year, we would love to listen to you perform your favorite
-                    songs on stage!
-                  </div>
+              <v-img :src="require('@/assets/GoldenVoice.jpg')" class="white--text align-end">
+                <v-card-title>Golden Voice</v-card-title>
+              </v-img>
+              <v-card-text class="black--text">
+                <div v-html="goldenVoiceText"></div>
 
-                  <div v-if="goldenVoiceTimeLeft < 0">
-                    <p>
-                      <br />Cheer on the singers at
-                      <b>Main Stage - {{goldenVoiceDay}}!</b>
-                    </p>
-                    <p>Questions? Email: goldenvoice@sdtet.com</p>
-                  </div>
-
-                  <div v-if="goldenVoiceTimeLeft >= 0">
-                    <br />
-                    <b>Deadline: {{goldenVoiceEnd}}</b>
-                  </div>
+                <div v-if="goldenVoiceTimeLeft < 0">
+                  <p>
+                    Cheer on the singers at
+                    <b>Main Stage - {{goldenVoiceDay}}!</b>
+                  </p>
+                  <p>Questions? Email: goldenvoice@sdtet.com</p>
                 </div>
-              </v-card-title>
+
+                <div v-if="goldenVoiceTimeLeft >= 0">
+                  <br />
+                  <b>Deadline: {{goldenVoiceEnd}}</b>
+                </div>
+              </v-card-text>
               <v-card-actions>
                 <v-btn
                   v-if="goldenVoiceTimeLeft >= 0"
@@ -121,7 +116,9 @@
                   dark
                 >
                   Sign up
-                  <span v-if="goldenVoiceTimeLeft < 10">&nbsp;- {{goldenVoiceTimeLeft}} days left!</span>
+                  <span
+                    v-if="goldenVoiceTimeLeft < 10"
+                  >&nbsp;- {{goldenVoiceTimeLeft}} days left!</span>
                 </v-btn>
               </v-card-actions>
             </v-card>
@@ -152,9 +149,16 @@
 </template>
 
 <script type="text/javascript">
+import stepUpDanceText from "./step-up-dance.md";
+import kidsSpotlightText from "./kids-spotlight.md";
+import goldenVoiceText from "./golden-voice.md";
+
 export default {
   data() {
     return {
+      stepUpDanceText: stepUpDanceText,
+      kidsSpotlightText: kidsSpotlightText,
+      goldenVoiceText: goldenVoiceText,
       stepUpDanceTimeLeft: 0,
       kidsSpotlightTimeLeft: 0,
       goldenVoiceTimeLeft: 0,

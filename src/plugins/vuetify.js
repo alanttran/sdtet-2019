@@ -1,8 +1,10 @@
-import Vue from 'vue'
+import Vue from 'vue';
+import Vuetify from 'vuetify/lib';
+
 import {
-  Vuetify,
   VApp,
   VNavigationDrawer,
+  VImg,
   VFooter,
   VList,
   VMenu,
@@ -17,13 +19,13 @@ import {
   VToolbar,
   transitions
 } from 'vuetify'
-import 'vuetify/src/stylus/app.styl'
 
 Vue.use(Vuetify, {
   components: {
     VApp,
     VNavigationDrawer,
     VFooter,
+    VImg,
     VList,
     VBtn,
     VIcon,
@@ -38,3 +40,9 @@ Vue.use(Vuetify, {
     transitions
   },
 })
+
+export default new Vuetify({
+  icons: {
+    iconfont: 'mdi',
+  },
+});

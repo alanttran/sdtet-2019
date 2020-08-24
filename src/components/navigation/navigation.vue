@@ -1,19 +1,19 @@
 <template>
-  <v-layout justify-center class="sdtet-navigation ">
+  <nav class="sdtet-navigation">
     <!-- <v-flex layout align-center >
       <a href="#"><img class="sdtet-logo" src="../../assets/sdtet-logo.svg" alt="Logo"></a>
     </v-flex> -->
-    <v-layout align-center justify-center class="sdtet-navigation__links">
-      <v-flex><a id="sdtet-nav-logo" href="#home" v-smooth-scroll><img style="width: 30px;" src="../../assets/mouse-logo.png" alt=""></a></v-flex>
-      <v-flex><a href="#sdtet-schedule-section" v-smooth-scroll>Schedule</a></v-flex>
-      <v-flex><a href="#sdtet-pageant-section" v-smooth-scroll>Pageant</a></v-flex>
-      <v-flex><a href="#sdtet-vendors-section" v-smooth-scroll>Vendors</a></v-flex>
-      <v-flex><a href="#sdtet-volunteers-section" v-smooth-scroll>Volunteers</a></v-flex>
-      <v-flex><a href="#sdtet-sponsors-section" v-smooth-scroll>Sponsors</a></v-flex>
-      <v-flex><a href="#sdtet-about-section" v-smooth-scroll>About</a></v-flex>
-      <v-flex><a href="#sdtet-contact-section" v-smooth-scroll>Contact</a></v-flex>
-      <v-flex><a href="https://www.paypal.com/fundraiser/charity/1440775" target="_blank">Donate</a></v-flex>
-    </v-layout>
+    <ul class="sdtet-navigation__links">
+      <li><a id="sdtet-nav-logo" href="#home" v-smooth-scroll><img style="width: 30px;" src="../../assets/mouse-logo.png" alt="Year of Mouse Logo"></a></li>
+      <li><a href="#sdtet-schedule-section" v-smooth-scroll>Schedule</a></li>
+      <li><a href="#sdtet-pageant-section" v-smooth-scroll>Pageant</a></li>
+      <li><a href="#sdtet-vendors-section" v-smooth-scroll>Vendors</a></li>
+      <li><a href="#sdtet-volunteers-section" v-smooth-scroll>Volunteers</a></li>
+      <li><a href="#sdtet-sponsors-section" v-smooth-scroll>Sponsors</a></li>
+      <li><a href="#sdtet-about-section" v-smooth-scroll>About</a></li>
+      <li><a href="#sdtet-contact-section" v-smooth-scroll>Contact</a></li>
+      <li><a href="https://www.paypal.com/fundraiser/charity/1440775" target="_blank">Donate</a></li>
+    </ul>
     <div class="sdtet-navigation-menu">
       <v-menu offset-y>
       <v-btn icon large slot="activator">
@@ -47,7 +47,7 @@
         </v-list>
       </v-menu>
     </div>
-  </v-layout>
+  </nav>
 </template>
 
 <script>

@@ -6,6 +6,9 @@
 	top: 0px;
 	background: #ffd200;
 	z-index: 20;
+	display: flex;
+	align-content: center;
+	justify-content: center;
 }
 
 #sdtet-nav-logo img{
@@ -19,17 +22,21 @@
 }
 
 .sdtet-navigation__links {
-
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	list-style-type: none;
 	margin-right: 15px;
   max-width: 50%;
   font-size: 14px;
   text-transform: uppercase;
-  font-weight: 600;
+	font-weight: 600;
+	padding-left: 0; // override vuetify
   a {
     color: black !important;
     font-family: 'Segoe UI', 'Roboto';
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 8px;
+    margin-right: 8px;
 
     &:hover{
     	text-decoration: underline;

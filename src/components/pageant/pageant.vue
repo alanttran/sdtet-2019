@@ -17,14 +17,12 @@
     <div class="ml-5 mr-5">
 
       <img class="ms-vn-logo ml-2 mb-2" style="float: right; max-width: 100%;" src="../../assets/MissVietnam_Logo.png">
-      <div class="ms-vn-text" v-for="text in pageantData.text" :key="text.id">
-        <p>{{text}}</p>
-      </div>
+      <div class="ms-vn-text" v-html="pageantText"></div>
     </div>
     <br/>
     <h1 class="sdtet-text-align-center">Pageant {{pageantData.pageant_year}}</h1>
     <h2 class="sdtet-text-align-center">{{pageantData.slogan}}</h2>
-    <div class="sdtet-text-align-center"><img style="" src="../../assets/pageant2020.jpg" alt=""></div>
+    <div class="sdtet-text-align-center"><img alt="Miss Vietnam San Diego Logo" style="" src="../../assets/pageant2020.jpg"></div>
     <!-- <div style="max-width: 750px; margin: 0 auto">
       <iframe width="100%" height="415" src="https://www.youtube.com/embed/HJZmvB7tIOw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div><br/> -->
@@ -34,17 +32,17 @@
       <v-layout id="contestants" row wrap>
         <v-flex style="display: flex; flex-direction: column" v-for="contestant in contestants" :key="contestant.id" xs12 sm6 md4 lg4>
           <v-card class="ma-4" style="flex: auto; display: flex; flex-direction: column">
-            <v-card-media :src="contestant.main_image_link" height="300px" style="background-position: center top; flex: none">
+            <v-img :src="contestant.main_image_link" height="300px" style="background-position: center top; flex: none">
               <v-btn class="msvn-vote-button" v-if="pageantData.voting" :href="contestant.fb_link" target="_blank" round small color="amber darken-1" dark>Vote!</v-btn>
-            </v-card-media>
-            <v-card-title primary-title class="pb-0" style="flex: 300px; align-items: start">
+            </v-img>
+            <v-card-text class="black--text pb-0" style="flex: 300px; align-items: start">
               <div>
                 <h4 class="title mb-3">{{contestant.pageant_number}}. {{contestant.first_name}} {{contestant.last_name}}</h4>
                 <h4 class="title mb-3" style="color: red">{{contestant.title}}</h4>
                 <p><i>{{contestant.school}}</i></p>
                 <p>"{{contestant.bio}}"</p>
               </div>
-            </v-card-title>
+            </v-card-text>
               
           </v-card>
         </v-flex>
@@ -56,10 +54,12 @@
 <script type="text/javascript">
 import axios from 'axios'
 import data from './pageant.json'
+import pageantText from './pageant.md'
 
 export default {
   data () {
     return {
+      pageantText: pageantText,
       contestants: [],
       pageantData: data
     }

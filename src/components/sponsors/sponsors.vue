@@ -6,7 +6,7 @@
         <v-flex xs12 md5 lg5>
           <h1 id="sponsors">Sponsors</h1>
           <p v-if="sponsorData.sponsorSignUp">
-            <v-btn style="width:350px" v-bind:href="sponsorData.applicationURL" target="_blank" block round color="amber lighten-1">Download 2020 Sponsorship Application </v-btn>
+            <v-btn style="width:350px" v-bind:href="sponsorData.applicationURL" target="_blank" block rounded color="amber lighten-1">Download 2020 Sponsorship Application </v-btn>
           </p>
           <p>
             <b>Questions or details?: </b>

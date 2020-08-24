@@ -40,7 +40,7 @@
               <v-flex md6>
                 <v-btn
                   class="sdtet-button-flat-button sdtet-wrap-text sdtet-volunteers-form"
-                  flat
+                  text
                   color="teal"
                   target="_blank"
                   href="https://s3-us-west-1.amazonaws.com/sdtet/documents/Release-of-Liability.pdf"
@@ -60,7 +60,7 @@
               <v-flex md6>
                 <v-btn
                   class="sdtet-button-flat-button sdtet-wrap-text sdtet-volunteers-form"
-                  flat
+                  text
                   color="teal"
                   target="_blank"
                   href="https://s3-us-west-1.amazonaws.com/sdtet/documents/hours_verification.pdf"
