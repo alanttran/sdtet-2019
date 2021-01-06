@@ -2,7 +2,7 @@
   <v-app>
     <v-main>
       <navigation></navigation>
-      <carousel></carousel>
+      <carousel @showModal="showModal()"></carousel>
       <schedule></schedule>
       <entertainment></entertainment>
       <pageant></pageant>
@@ -11,19 +11,15 @@
       <sponsors></sponsors>
       <about></about>
       <directions></directions>
-      <v-dialog v-model="dialog" width="600">
+      <v-dialog v-model="dialog"  width="750">
         <v-card>
-          <v-card-title class="headline grey lighten-2" primary-title>Thank you for joining us!</v-card-title>
+          <v-card-title class="headline grey lighten-2" primary-title>16th Annual SD Tết Festival Goes Virtual Feb 13, 2021</v-card-title>
 
           <v-card-text>
-            <h2>
-              Next festival is on
-              <b>Feb 12-14, 2021</b>! For the year of the Ox!
-            </h2>
             <div style="width: 250px; padding: 1rem; margin: 0 auto">
-              <img height="200" src="./assets/Ox-2021.png" alt />
+              <img height="150" src="./assets/Ox-2021.png" alt />
             </div>
-
+            <div v-html="pressReleaseText"></div>
             <p>
               If you have any questions or feedback, send them to
               <b>info@sdtet.com!</b>
@@ -89,6 +85,8 @@ import Volunteers from "./components/volunteers/volunteers";
 import Directions from "./components/directions/directions";
 import About from "./components/about/about";
 
+import markdown from './press-release-2021.md'
+
 export default {
   name: "app",
   components: {
@@ -105,9 +103,16 @@ export default {
   },
   data() {
     return {
-      dialog: true
+      dialog: true,
+      pressReleaseText: markdown
     };
+  },
+  methods: {
+    showModal(){
+      this.dialog = true;
+    }
   }
+
 };
 </script>
 
