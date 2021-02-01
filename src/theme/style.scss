@@ -1,7 +1,12 @@
 @import 'colors';
 
 html, body{
-	//background-color: $background-color-light !important;  
+	background-color: #FFDAA6;  
+	overflow-y: auto;
+}
+.theme--light.v-application{
+	background-color: #FFDAA6; 
+	color: #B40105; 
 }
 h1, h2, h3, h4, h5, h6{
 	font-family: 'Nunito', sans-serif;
@@ -23,6 +28,20 @@ a{
 	&:hover{
 		color: $link-hover-color;
 	}
+}
+
+.banner{
+	height: 350px; 
+	background-image: url(./assets/year-of-ox-banner.png);
+	background-position: center center;
+	background-size: cover;
+}
+
+.ox-footer{
+	background-image: url(./assets/ox-footer.png);
+	background-position: center center;
+	margin-top: 100px;
+	height: 300px;
 }
 
 .sdtet-container {

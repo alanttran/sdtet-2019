@@ -7,7 +7,7 @@
     <v-alert
       type="error"
     >
-      <div style="margin-left: 15%">This site is from our past festival in 2020. Please read about our upcoming festival <a @click="showModal">here</a>. </div>
+      <div style="max-width: 650px; margin: 0 auto">This site is from our past festival in 2020. Please read about our upcoming festival <a @click="showModal">here</a>. </div>
     </v-alert>
     <v-layout column align-center justify-center class="sdtet-container" style="padding-bottom: 24px;" >
       <!-- <h1>San Diego Tết Festival 2018<br/>Spring Blossoms - Mira Mesa<br/>February 16 - 18, 2018</h1> -->
