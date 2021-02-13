@@ -30,6 +30,30 @@ a{
 	}
 }
 
+.poster, .msvn-project-image{
+	@media(max-width: 1024px){
+		display: none;
+	}
+}
+
+
+
+.ox-timeslot{
+	display: flex;
+
+	+ .ox-timeslot{
+		padding-top: 8px;
+	}
+
+	.ox-time{
+		flex: 0 0 100px;
+	}
+	.ox-text{
+		flex: auto;
+		color: #333;
+	}
+}
+
 .banner{
 	height: 350px; 
 	background-image: url(./assets/year-of-ox-banner.png);
