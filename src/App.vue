@@ -42,12 +42,11 @@
           <br />
           <p style="font-size: 24px">
             <b>February 13th, 2021</b><br />
-            12:00 PM - 5:00 PM<br />Livestream broadcast <u
-              ><b>{{ timeLeft }}</b></u
-            >!
+            12:00 PM - 5:00 PM<br />
             
           </p>
-          <p>* We will also rebroadcast on Sunday Feb 14th</p>
+          <p>*** <u>This is a rebroadcast</u>. There are no giveaways today. Thank you for your support! *** </p>
+          <p>See you next year for the Year of the Tiger - January 28-30, 2022!</p>
           <p>Questions? Email us at <b>info@sdtet.com</b></p>
           <p style="text-align: center">
             <v-btn
@@ -65,7 +64,7 @@
         <img style="position: absolute; top: 200px; right: calc(50% - 650px);" src="./assets/ox-lion-dance-2.png" alt=""> -->
       </div>
       <div style="max-width: 1024px; margin: 0 auto">
-        <div style="display: none; padding: 56.25% 0 0 0; position: relative">
+        <div style="padding: 56.25% 0 0 0; position: relative">
           <iframe
             src="https://vimeo.com/event/691615/embed/94480f9de0"
             frameborder="0"
@@ -425,9 +424,9 @@ export default {
   },
   created() {
     var moment = require("moment");
-    // var todaysdate = moment();
+    var todaysdate = moment();
     // var festivalDate = moment("2021-02-14");
-    this.timeLeft = moment("20210213 12:00", "YYYYMMDD h:mm").fromNow(); // 9 years ago
+    this.timeLeft = moment("20210213 12:00", "YYYYMMDD h:mm").diff(todaysdate,); // 9 years ago
   },
 };
 </script>
